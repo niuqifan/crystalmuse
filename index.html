@@ -17,6 +17,7 @@
     <span>✉ info@crystalmuse.com</span>
   </div>
 
+
   <header class="navbar">
     <a href="#home" class="brand">
       <span class="logo">◇</span>
@@ -32,6 +33,7 @@
     </nav>
     <button class="inquiry-btn" id="openInquiry">Inquiry (<span id="inquiryCount">0</span>)</button>
   </header>
+
 
   <main>
     <section id="home" class="hero">
@@ -49,130 +51,16 @@
           <span>◇ Handpicked Quality</span>
         </div>
       </div>
-      <div class="hero-image" aria-label="Crystal display">
-        <img src="https://sc01.alicdn.com/kf/A659d29bffea24572a1fabcd1ef5d7076x.png" alt="Healing Crystals" />
-      </div>    </section>
+          </section>
+
 
     <section id="intention" class="section">
       <div class="section-title"><span></span><h2>Shop by Intention</h2><span></span></div>
       <div class="intent-grid" id="intentGrid"></div>
     </section>
 
+
     <section class="split-section">
       <div id="chakra" class="panel chakra-panel">
         <h2>Shop by Chakra</h2>
         <div class="chakra-layout">
-          <div class="meditation">
-            <span class="dot crown"></span><span class="dot third"></span><span class="dot throat"></span><span class="dot heart"></span><span class="dot solar"></span><span class="dot sacral"></span><span class="dot root"></span>
-          </div>
-          <ul class="chakra-list" id="chakraList"></ul>
-        </div>
-        <button class="text-link" data-filter="chakra" data-value="all">Explore chakra crystals →</button>
-      </div>
-      <div id="zodiac" class="panel zodiac-panel">
-        <h2>Shop by Zodiac Sign</h2>
-        <div class="zodiac-grid" id="zodiacGrid"></div>
-        <button class="text-link" data-filter="zodiac" data-value="all">View zodiac crystals →</button>
-      </div>
-    </section>
-
-    <section id="catalog" class="section catalog-section">
-      <div class="section-title"><span></span><h2>Popular Crystal Products</h2><span></span></div>
-      <div class="catalog-layout">
-        <aside class="filters">
-          <input id="searchInput" type="search" placeholder="Search products..." />
-          <select id="filterIntention"><option value="all">Intention</option></select>
-          <select id="filterChakra"><option value="all">Chakra</option></select>
-          <select id="filterZodiac"><option value="all">Zodiac</option></select>
-          <select id="filterCrystal"><option value="all">Crystal Type</option></select>
-          <select id="filterShape"><option value="all">Product Type</option></select>
-          <select id="filterMOQ"><option value="all">MOQ</option><option value="50">MOQ ≤ 50</option><option value="100">MOQ ≤ 100</option></select>
-          <button id="resetFilters" class="reset">↻ Reset filters</button>
-        </aside>
-        <div class="product-grid" id="productGrid"></div>
-      </div>
-    </section>
-
-    <section id="oem" class="oem">
-      <div>
-        <p class="eyebrow">OEM & Private Label</p>
-        <h2>Crystal Solutions for Your Brand</h2>
-        <p>We help you build your own crystal brand with custom products, packaging, cards and low MOQ trial orders.</p>
-        <a href="#contact" class="btn primary">Start OEM Inquiry</a>
-      </div>
-      <div class="process">
-        <div><b>1</b><span>Inquiry</span></div>
-        <div><b>2</b><span>Quotation</span></div>
-        <div><b>3</b><span>Sample</span></div>
-        <div><b>4</b><span>Production</span></div>
-        <div><b>5</b><span>Delivery</span></div>
-      </div>
-    </section>
-
-    <section class="stats">
-      <div><strong>500+</strong><span>Crystal Products</span></div>
-      <div><strong>50+</strong><span>Countries Served</span></div>
-      <div><strong>10+</strong><span>Years Experience</span></div>
-      <div><strong>100%</strong><span>Natural Crystals</span></div>
-      <div><strong>7 Days</strong><span>Sample Time</span></div>
-    </section>
-
-    <section id="learn" class="learn-contact">
-      <div class="learn">
-        <h2>Crystal Learning Hub</h2>
-        <p>Explore guides and articles to deepen your knowledge and energy practice.</p>
-        <div class="article-grid">
-          <article><div class="article-img amethyst"></div><h3>Crystal Meanings</h3><p>A-Z complete guide</p></article>
-          <article><div class="article-img chakra"></div><h3>Chakra Guide</h3><p>Balance your energy</p></article>
-          <article><div class="article-img zodiac"></div><h3>Zodiac Crystals</h3><p>Find your perfect stone</p></article>
-          <article><div class="article-img meditation-img"></div><h3>Meditation</h3><p>Crystal practices</p></article>
-        </div>
-      </div>
-      <div id="contact" class="contact-card">
-        <h2>Stay Connected</h2>
-        <p>Get crystal tips, new arrivals and wholesale offers.</p>
-        <form id="contactForm">
-          <input required placeholder="Your name" />
-          <input type="email" required placeholder="Email address" />
-          <input placeholder="WhatsApp" />
-          <textarea placeholder="Tell us what you need"></textarea>
-          <button class="btn primary" type="submit">Send Inquiry</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div><strong>CRYSTALMUSE</strong><p>Your trusted partner for healing crystals, spiritual jewelry and custom crystal collections worldwide.</p></div>
-    <div><b>Quick Links</b><a href="#catalog">Catalog</a><a href="#oem">OEM Service</a><a href="#learn">Crystal Guide</a></div>
-    <div><b>Contact Us</b><span>info@crystalmuse.com</span><span>+86 123 4567 8910</span><span>WhatsApp Chat</span></div>
-  </footer>
-
-  <button class="floating-inquiry" id="floatingInquiry">Inquiry <span id="floatingCount">0</span></button>
-
-  <div class="modal" id="productModal" aria-hidden="true">
-    <div class="modal-card">
-      <button class="close" data-close="productModal">×</button>
-      <div id="modalContent"></div>
-    </div>
-  </div>
-
-  <div class="modal" id="inquiryModal" aria-hidden="true">
-    <div class="modal-card inquiry-modal">
-      <button class="close" data-close="inquiryModal">×</button>
-      <h2>Inquiry Basket</h2>
-      <div id="basketItems"></div>
-      <form id="inquiryForm">
-        <input required placeholder="Name" />
-        <input type="email" required placeholder="Email" />
-        <input placeholder="WhatsApp" />
-        <input placeholder="Country" />
-        <textarea placeholder="Message / OEM requirement"></textarea>
-        <button type="submit" class="btn primary">Submit Inquiry</button>
-      </form>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
