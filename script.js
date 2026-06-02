@@ -1,5 +1,5 @@
 const intentions = [
-  {name:'Love', icon:'♡', desc:'Open your heart and attract love', grad:'linear-gradient(135deg,#ffd8e5,#d897b3,#fff6f8)'},
+  {name:'Love', icon:'♡', desc:'Open your heart and attract love', grad:'linear-gradient(135deg,#ffd8e5,#d897b3,#fff6f8)', img:'https://sc01.alicdn.com/kf/Abec66884c2044d9e9f3b1c7680747ae6p.png'},
   {name:'Abundance', icon:'◎', desc:'Attract wealth and prosperity', grad:'linear-gradient(135deg,#fff0bf,#d79732,#fff8d9)'},
   {name:'Protection', icon:'♜', desc:'Shield your energy and stay safe', grad:'linear-gradient(135deg,#1d1328,#111,#8c7b8f)'},
   {name:'Calm', icon:'♨', desc:'Find peace and balance', grad:'linear-gradient(135deg,#e6ddd5,#b7a69c,#fff)'},
@@ -28,7 +28,7 @@ let basket = JSON.parse(localStorage.getItem('crystalBasket') || '[]');
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
 function init(){renderIntentions();renderChakras();renderZodiacs();fillFilters();renderProducts(products);updateBasket();bindEvents();}
-function renderIntentions(){ $('#intentGrid').innerHTML=intentions.map(i=>`<article class="intent-card" data-filter="intention" data-value="${i.name}"><div class="intent-img" data-icon="${i.icon}" style="--grad:${i.grad}"></div><h3>${i.name}</h3><p>${i.desc}</p></article>`).join(''); }
+function renderIntentions(){ $('#intentGrid').innerHTML=intentions.map(i=>`<article class="intent-card" data-filter="intention" data-value="${i.name}"><div class="intent-img" ${i.img ? '' : 'data-icon="'+i.icon+'"'} style="${i.img ? 'background-image:url('+i.img+');background-size:cover;background-position:center;' : '--grad:'+i.grad}"></div><h3>${i.name}</h3><p>${i.desc}</p></article>`).join(''); }
 function renderChakras(){ $('#chakraList').innerHTML=chakras.map(c=>`<li><button data-filter="chakra" data-value="${c}">${c}</button></li>`).join(''); }
 function renderZodiacs(){ $('#zodiacGrid').innerHTML=zodiacs.map(([n,s])=>`<button data-filter="zodiac" data-value="${n}"><b>${s}</b><span>${n}</span></button>`).join(''); }
 function fillFilters(){
@@ -53,3 +53,4 @@ function bindEvents(){
   $('#inquiryForm').onsubmit=e=>{e.preventDefault(); alert('Inquiry submitted in demo mode. Connect this form before going live.');};
 }
 init();
+
