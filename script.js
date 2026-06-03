@@ -1,5 +1,5 @@
 const intentions = [
-  {name:'Love', icon:'♡', desc:'Open your heart and attract love', grad:'linear-gradient(135deg,#ffd8e5,#d897b3,#fff6f8)', img:'https://sc01.alicdn.com/kf/Abec66884c2044d9e9f3b1c7680747ae6p.png'},
+  {name:'Love', icon:'♡', desc:'Open your heart and attract love', grad:'linear-gradient(135deg,#ffd8e5,#d897b3,#fff6f8)', img:'https://sc01.alicdn.com/kf/Aa6d7fa95724145ada4519ddac305bdefb.png'},
   {name:'Abundance', icon:'◎', desc:'Attract wealth and prosperity', grad:'linear-gradient(135deg,#fff0bf,#d79732,#fff8d9)'},
   {name:'Protection', icon:'♜', desc:'Shield your energy and stay safe', grad:'linear-gradient(135deg,#1d1328,#111,#8c7b8f)'},
   {name:'Calm', icon:'♨', desc:'Find peace and balance', grad:'linear-gradient(135deg,#e6ddd5,#b7a69c,#fff)'},
@@ -53,4 +53,6 @@ function bindEvents(){
   $('#inquiryForm').onsubmit=e=>{e.preventDefault(); alert('Inquiry submitted in demo mode. Connect this form before going live.');};
 }
 init();
+
+
 
