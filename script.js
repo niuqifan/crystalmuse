@@ -1,5 +1,5 @@
 const intentions = [
-  {name:'Love', icon:'♡', desc:'Open your heart and attract love', grad:'linear-gradient(135deg,#ffd8e5,#d897b3,#fff6f8)', img:'https://sc01.alicdn.com/kf/Aa6d7fa95724145ada4519ddac305bdefb.png'},
+  {name:'Love', icon:'♡', desc:'Open your heart and attract love', grad:'linear-gradient(135deg,#ffd8e5,#d897b3,#fff6f8)', img:'https://sc01.alicdn.com/kf/A2877551b33a947499c998f3bd81767555.png'},
   {name:'Abundance', icon:'◎', desc:'Attract wealth and prosperity', grad:'linear-gradient(135deg,#fff0bf,#d79732,#fff8d9)'},
   {name:'Protection', icon:'♜', desc:'Shield your energy and stay safe', grad:'linear-gradient(135deg,#1d1328,#111,#8c7b8f)'},
   {name:'Calm', icon:'♨', desc:'Find peace and balance', grad:'linear-gradient(135deg,#e6ddd5,#b7a69c,#fff)'},
@@ -32,7 +32,7 @@ function renderIntentions(){ $('#intentGrid').innerHTML=intentions.map(i=>`<arti
 function renderChakras(){ $('#chakraList').innerHTML=chakras.map(c=>`<li><button data-filter="chakra" data-value="${c}">${c}</button></li>`).join(''); }
 function renderZodiacs(){ $('#zodiacGrid').innerHTML=zodiacs.map(([n,s])=>`<button data-filter="zodiac" data-value="${n}"><b>${s}</b><span>${n}</span></button>`).join(''); }
 function fillFilters(){
-  fill('#filterIntention',[...new Set(products.map(p=>p.intention))]); fill('#filterChakra',chakras); fill('#filterZodiac',zodiacs.map(z=>z[0])); fill('#filterCrystal',[...new Set(products.map(p=>p.crystal))]); fill('#filterShape',[...new Set(products.map(p=>p.shape))]);
+  fill('#filterIntention', [...new Set(products.map(p=>p.intention))]); fill('#filterChakra',chakras); fill('#filterZodiac',zodiacs.map(z=>z[0])); fill('#filterCrystal',[...new Set(products.map(p=>p.crystal))]); fill('#filterShape',[...new Set(products.map(p=>p.shape))]);
 }
 function fill(sel,items){ const el=$(sel); items.forEach(v=>el.insertAdjacentHTML('beforeend',`<option value="${v}">${v}</option>`)); }
 function renderProducts(list){ $('#productGrid').innerHTML=list.map(p=>`<article class="product-card"><div class="product-img" style="--grad:${p.grad}">${p.icon}</div><h3>${p.name}</h3><p>${p.intention} • ${p.chakra} Chakra<br>${p.crystal} • MOQ ${p.moq} pcs</p><div class="card-actions"><button data-view="${p.id}">View Details</button><button data-add="${p.id}">Add to Inquiry</button></div></article>`).join('') || '<p>No matching products found.</p>'; }
@@ -53,6 +53,3 @@ function bindEvents(){
   $('#inquiryForm').onsubmit=e=>{e.preventDefault(); alert('Inquiry submitted in demo mode. Connect this form before going live.');};
 }
 init();
-
-
-
