@@ -2,7 +2,7 @@ const intentions = [
   {name:'Love', icon:'♡', desc:'Open your heart and attract love', grad:'linear-gradient(135deg,#ffd8e5,#d897b3,#fff6f8)', img:'https://sc01.alicdn.com/kf/A2877551b33a947499c998f3bd81767555.png'},
   {name:'Abundance', icon:'◎', desc:'Attract wealth and prosperity', grad:'linear-gradient(135deg,#fff0bf,#d79732,#fff8d9)', img:'https://sc01.alicdn.com/kf/A1a9994bfd3004e13a2b54b19828cfe76d.png'},
   {name:'Protection', icon:'♜', desc:'Shield your energy and stay safe', grad:'linear-gradient(135deg,#1d1328,#111,#8c7b8f)', img:'https://sc01.alicdn.com/kf/A4e64b52305ce49cca74479b7736ea4c5v.png'},
-  {name:'Calm', icon:'♨', desc:'Find peace and balance', grad:'linear-gradient(135deg,#e6ddd5,#b7a69c,#fff)'},
+  {name:'Calm', icon:'♨', desc:'Find peace and balance', grad:'linear-gradient(135deg,#e6ddd5,#b7a69c,#fff)', img:'https://sc01.alicdn.com/kf/A86bf44e045a045489b1db87c0bcd8d34D.png'},
   {name:'Sleep', icon:'☾', desc:'Improve sleep and relaxation', grad:'linear-gradient(135deg,#20133d,#6d5597,#d7ccff)', img:'https://sc01.alicdn.com/kf/Abb5a692d04d14dc1acc10e1f2f2670328.png'},
   {name:'Spirituality', icon:'◉', desc:'Connect to higher consciousness', grad:'linear-gradient(135deg,#2c174a,#a477cc,#fff0ff)', img:'https://sc01.alicdn.com/kf/A657bdfee809542d8804947e9ef02a88f7.png'},
   {name:'Confidence', icon:'★', desc:'Boost self-esteem and courage', grad:'linear-gradient(135deg,#f8d27c,#c47d28,#fff3d2)', img:'https://sc01.alicdn.com/kf/A44ff028a03e64559b1445599f45ef619J.png'},
