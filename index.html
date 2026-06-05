@@ -3,24 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CrystalMuse Healing Energy Catalog</title>
+  <title>AURANOVAGEMS Healing Energy Catalog</title>
   <meta name="description" content="Healing crystal product catalog for chakra, zodiac, intention, OEM and wholesale inquiries." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="assets/css/background-config.css" />
 </head>
 <body>
   <div class="topbar">
     <span>✦ Worldwide Shipping</span>
     <span>★ 500+ 5-Star Reviews</span>
-    <span>✉ info@crystalmuse.com</span>
+    <span>✉ info@auranovagems.com</span>
   </div>
 
   <header class="navbar">
     <a href="#home" class="brand">
-      <span class="logo">◇</span>
-      <span><strong>CRYSTALMUSE</strong><small>Healing Energy</small></span>
+      <span class="logo logo-mark" aria-hidden="true"></span>
+      <span><strong>AURANOVAGEMS</strong><small>Healing Energy</small></span>
     </a>
     <nav>
       <a href="#intention">Intention</a>
@@ -28,6 +29,7 @@
       <a href="#zodiac">Zodiac</a>
       <a href="#catalog">Collections</a>
       <a href="#learn">Learn</a>
+      <a href="#contact">About Us</a>
       <a href="#oem">OEM & Wholesale</a>
     </nav>
     <button class="inquiry-btn" id="openInquiry">Inquiry (<span id="inquiryCount">0</span>)</button>
@@ -49,6 +51,7 @@
           <span>◇ Handpicked Quality</span>
         </div>
       </div>
+      <div class="hero-art" aria-hidden="true"></div>
     </section>
 
     <section id="intention" class="section">
@@ -65,6 +68,7 @@
           </div>
           <ul class="chakra-list" id="chakraList"></ul>
         </div>
+        <button class="text-link" data-filter="chakra" data-value="all">Explore chakra crystals →</button>
       </div>
       <div id="zodiac" class="panel zodiac-panel">
         <h2>Shop by Zodiac Sign</h2>
@@ -91,7 +95,7 @@
     </section>
 
     <section id="oem" class="oem">
-      <div class="oem-banner"></div>
+      <div class="oem-banner" aria-hidden="true"></div>
       <div>
         <p class="eyebrow">OEM & Private Label</p>
         <h2>Crystal Solutions for Your Brand</h2>
@@ -120,10 +124,10 @@
         <h2>Crystal Learning Hub</h2>
         <p>Explore guides and articles to deepen your knowledge and energy practice.</p>
         <div class="article-grid">
-          <article><div class="article-img amethyst"></div><h3>Crystal Meanings</h3><p>A-Z complete guide</p></article>
-          <article><div class="article-img chakra"></div><h3>Chakra Guide</h3><p>Balance your energy</p></article>
-          <article><div class="article-img zodiac"></div><h3>Zodiac Crystals</h3><p>Find your perfect stone</p></article>
-          <article><div class="article-img meditation-img"></div><h3>Meditation</h3><p>Crystal practices</p></article>
+          <article><div class="article-img learn-bg-1"></div><h3>Crystal Meanings</h3><p>A-Z complete guide</p></article>
+          <article><div class="article-img learn-bg-2"></div><h3>Chakra Guide</h3><p>Balance your energy</p></article>
+          <article><div class="article-img learn-bg-3"></div><h3>Zodiac Crystals</h3><p>Find your perfect stone</p></article>
+          <article><div class="article-img learn-bg-4"></div><h3>Meditation</h3><p>Crystal practices</p></article>
         </div>
       </div>
       <div id="contact" class="contact-card">
@@ -141,9 +145,9 @@
   </main>
 
   <footer>
-    <div><strong>CRYSTALMUSE</strong><p>Your trusted partner for healing crystals, spiritual jewelry and custom crystal collections worldwide.</p></div>
+    <div><strong>AURANOVAGEMS</strong><p>Your trusted partner for healing crystals, spiritual jewelry and custom crystal collections worldwide.</p></div>
     <div><b>Quick Links</b><a href="#catalog">Catalog</a><a href="#oem">OEM Service</a><a href="#learn">Crystal Guide</a></div>
-    <div><b>Contact Us</b><span>info@crystalmuse.com</span><span>+86 123 4567 8910</span><span>WhatsApp Chat</span></div>
+    <div><b>Contact Us</b><span>info@auranovagems.com</span><span>+86 123 4567 8910</span><a href="whatsapp.html" class="footer-wa-link">WhatsApp Chat</a></div>
   </footer>
 
   <button class="floating-inquiry" id="floatingInquiry">Inquiry <span id="floatingCount">0</span></button>
@@ -158,7 +162,8 @@
   <div class="modal" id="inquiryModal" aria-hidden="true">
     <div class="modal-card inquiry-modal">
       <button class="close" data-close="inquiryModal">×</button>
-      <div id="inquiryBasket"></div>
+      <h2>Inquiry Basket</h2>
+      <div id="basketItems"></div>
       <form id="inquiryForm">
         <input required placeholder="Name" />
         <input type="email" required placeholder="Email" />
@@ -171,5 +176,12 @@
   </div>
 
   <script src="script.js"></script>
+
+  <a class="whatsapp-float" href="whatsapp.html" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M16.02 3.2C9 3.2 3.3 8.9 3.3 15.92c0 2.25.59 4.43 1.7 6.35L3.2 28.8l6.7-1.75a12.63 12.63 0 0 0 6.12 1.56h.01c7.02 0 12.72-5.7 12.72-12.72S23.04 3.2 16.02 3.2Zm0 23.25h-.01c-1.9 0-3.77-.51-5.4-1.48l-.39-.23-3.97 1.04 1.06-3.87-.25-.4a10.5 10.5 0 0 1-1.6-5.59c0-5.82 4.74-10.56 10.57-10.56 2.82 0 5.47 1.1 7.46 3.1a10.48 10.48 0 0 1 3.1 7.46c0 5.82-4.74 10.55-10.57 10.55Zm5.8-7.9c-.32-.16-1.88-.93-2.17-1.03-.29-.11-.5-.16-.71.16-.21.32-.82 1.03-1 1.24-.18.21-.37.24-.69.08-.32-.16-1.34-.49-2.55-1.57-.94-.84-1.58-1.88-1.76-2.2-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.72-.98-2.36-.26-.62-.52-.54-.71-.55h-.61c-.21 0-.56.08-.85.4-.29.32-1.11 1.08-1.11 2.64s1.14 3.06 1.3 3.27c.16.21 2.24 3.42 5.43 4.79.76.33 1.35.52 1.81.67.76.24 1.45.21 2 .13.61-.09 1.88-.77 2.15-1.51.26-.74.26-1.38.18-1.51-.08-.13-.29-.21-.61-.37Z"/>
+    </svg>
+  </a>
+
 </body>
 </html>
