@@ -1,0 +1,1127 @@
+/*
+=========================================================
+Background Image Configuration
+=========================================================
+
+以后换图片时，优先只改这个文件：
+assets/css/background-config.css
+
+规则：
+1. Hero 头图只改 --hero-bg / --hero-position。
+2. Shop by Intention 只改 --intent-01 到 --intent-08。
+3. Shop by Chakra 只改 --chakra-bg / --chakra-position。
+4. 不要直接覆盖旧图片文件，新增图片后换路径，方便回退。
+5. 不要在 HTML 里插入 <img>，这些区域都使用 background-image。
+=========================================================
+*/
+
+:root{
+  /* Hero / 首页头图 */
+  --hero-bg: url("../images/hero-background.png");
+  --hero-position: center calc(50% - 40px);
+  --hero-position-tablet: center calc(50% - 38px);
+  --hero-position-mobile: 72% calc(50% - 30px);
+  --hero-size: cover;
+
+  /* Shop by Chakra */
+  --chakra-bg: url("../images/chakra-background.png");
+  --chakra-position: left center;
+  --chakra-position-tablet: center top;
+  --chakra-position-mobile: 30% top;
+  --chakra-size: cover;
+
+  /* Shop by Intention，按页面显示顺序对应 1-8 */
+  --intent-01: url("../images/intent-01.png");
+  --intent-02: url("../images/intent-02.png");
+  --intent-03: url("../images/intent-03.png");
+  --intent-04: url("../images/intent-04.png");
+  --intent-05: url("../images/intent-05.png");
+  --intent-06: url("../images/intent-06.png");
+  --intent-07: url("../images/intent-07.png");
+  --intent-08: url("../images/intent-08.png");
+  --intent-position: center center;
+  --intent-size: cover;
+
+  /* Popular Crystal Products，按你本次上传顺序对应 1-5 */
+  --product-01: url("../images/product-01.png");
+  --product-02: url("../images/product-02.png");
+  --product-03: url("../images/product-03.png");
+  --product-04: url("../images/product-04.png");
+  --product-05: url("../images/product-05.png");
+  --product-06: url("../images/product-06.png");
+  --product-07: url("../images/product-07.png");
+  --product-08: url("../images/product-08.png");
+  --product-09: url("../images/product-09.png");
+  --product-10: url("../images/product-10.png");
+  --product-position: center center;
+  --product-size: cover;
+
+  /* OEM & Private Label top banner */
+  --oem-banner-bg: url("../images/oem-banner.png");
+  --oem-banner-position: center center;
+  --oem-banner-position-mobile: center center;
+  --oem-banner-size: cover;
+
+  /* Learning Hub article backgrounds */
+  --learn-01: url("../images/learn-01.png");
+  --learn-02: url("../images/learn-02.png");
+  --learn-03: url("../images/learn-03.png");
+  --learn-04: url("../images/learn-04.png");
+  --learn-position: center center;
+  --learn-size: cover;
+}
+
+/* ---------------- Hero / 首页头图 ---------------- */
+.hero{
+  background-image:
+    linear-gradient(90deg,
+      rgba(252,247,243,.97) 0%,
+      rgba(252,247,243,.93) 26%,
+      rgba(252,247,243,.74) 41%,
+      rgba(252,247,243,.38) 54%,
+      rgba(252,247,243,0) 67%
+    ),
+    var(--hero-bg) !important;
+  background-repeat: no-repeat !important;
+  background-position: var(--hero-position) !important;
+  background-size: var(--hero-size) !important;
+}
+
+/* ---------------- Shop by Intention ---------------- */
+.intent-grid{
+  grid-template-columns: repeat(4, minmax(0,1fr)) !important;
+  gap: 18px !important;
+}
+
+.intent-card{
+  display:flex;
+  flex-direction:column;
+  text-align:left;
+  background:#fff;
+}
+
+.intent-img{
+  height:auto !important;
+  aspect-ratio:16/9;
+  background-repeat:no-repeat !important;
+  background-position:var(--intent-position) !important;
+  background-size:var(--intent-size) !important;
+  background-color:#f5efe9;
+}
+
+.intent-img:after{
+  content:none !important;
+}
+
+.intent-bg-1{background-image:var(--intent-01) !important;}
+.intent-bg-2{background-image:var(--intent-02) !important;}
+.intent-bg-3{background-image:var(--intent-03) !important;}
+.intent-bg-4{background-image:var(--intent-04) !important;}
+.intent-bg-5{background-image:var(--intent-05) !important;}
+.intent-bg-6{background-image:var(--intent-06) !important;}
+.intent-bg-7{background-image:var(--intent-07) !important;}
+.intent-bg-8{background-image:var(--intent-08) !important;}
+
+.intent-card h3{
+  margin:14px 16px 6px;
+  text-align:left;
+}
+
+.intent-card p{
+  padding:0 16px 18px;
+  text-align:left;
+  font-size:13px;
+  line-height:1.45;
+}
+
+/* ---------------- Shop by Chakra ---------------- */
+.chakra-panel{
+  position:relative;
+  min-height:540px;
+  padding:30px 28px;
+  overflow:hidden;
+  background-image:
+    linear-gradient(90deg,
+      rgba(255,250,245,0.06) 0%,
+      rgba(255,250,245,0.10) 24%,
+      rgba(255,250,245,0.34) 46%,
+      rgba(255,250,245,0.80) 68%,
+      rgba(255,250,245,0.94) 100%
+    ),
+    var(--chakra-bg) !important;
+  background-repeat:no-repeat !important;
+  background-position:var(--chakra-position) !important;
+  background-size:var(--chakra-size) !important;
+}
+
+.chakra-panel h2{
+  width:100%;
+  text-align:center !important;
+  display:block;
+  margin:0 0 18px 0;
+}
+
+.chakra-layout{
+  display:block;
+  position:relative;
+  z-index:1;
+}
+
+.chakra-panel .meditation{
+  display:none !important;
+}
+
+.chakra-panel .chakra-list{
+  width:min(280px,100%);
+  margin-left:auto;
+  display:grid;
+  gap:10px;
+}
+
+.chakra-panel .chakra-list button{
+  background:rgba(255,255,255,0.82);
+  backdrop-filter:blur(6px);
+  border:1px solid rgba(234,223,213,.95);
+  box-shadow:0 10px 24px rgba(76,35,90,.08);
+}
+
+.chakra-panel .text-link{
+  display:block;
+  width:max-content;
+  margin-left:auto;
+  margin-top:20px;
+  padding:10px 14px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.70);
+  backdrop-filter:blur(6px);
+}
+
+/* ---------------- Responsive / 响应式 ---------------- */
+@media(max-width:1100px){
+  .hero{
+    background-image:
+      linear-gradient(180deg,
+        rgba(252,247,243,.96) 0%,
+        rgba(252,247,243,.90) 42%,
+        rgba(252,247,243,.20) 100%
+      ),
+      var(--hero-bg) !important;
+    background-position:var(--hero-position-tablet) !important;
+  }
+
+  .intent-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+
+  .chakra-panel{
+    min-height:620px;
+    padding:28px 24px 34px;
+    background-image:
+      linear-gradient(180deg,
+        rgba(255,250,245,0.28) 0%,
+        rgba(255,250,245,0.18) 34%,
+        rgba(255,250,245,0.82) 68%,
+        rgba(255,250,245,0.95) 100%
+      ),
+      var(--chakra-bg) !important;
+    background-position:var(--chakra-position-tablet) !important;
+  }
+
+  .chakra-panel .chakra-list,
+  .chakra-panel .text-link{
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+@media(max-width:720px){
+  .hero{
+    background-position:var(--hero-position-mobile) !important;
+  }
+
+  .intent-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:12px !important;
+  }
+
+  .intent-card p{
+    font-size:12px;
+    padding:0 12px 14px;
+  }
+
+  .intent-card h3{
+    margin:12px 12px 5px;
+  }
+
+  .chakra-panel{
+    min-height:580px;
+    padding:22px 16px 24px;
+    background-image:
+      linear-gradient(180deg,
+        rgba(255,250,245,0.22) 0%,
+        rgba(255,250,245,0.16) 28%,
+        rgba(255,250,245,0.84) 62%,
+        rgba(255,250,245,0.96) 100%
+      ),
+      var(--chakra-bg) !important;
+    background-position:var(--chakra-position-mobile) !important;
+  }
+
+  .chakra-panel .chakra-list{
+    width:100%;
+    max-width:320px;
+  }
+}
+
+
+/* ---------------- Popular Crystal Products ---------------- */
+.product-img{
+  background-repeat:no-repeat;
+  background-position:var(--product-position) !important;
+  background-size:var(--product-size) !important;
+}
+.product-img.product-photo{
+  color:transparent !important;
+  font-size:0 !important;
+  line-height:0 !important;
+}
+.product-bg-1{background-image:var(--product-01) !important;}
+.product-bg-2{background-image:var(--product-02) !important;}
+.product-bg-3{background-image:var(--product-03) !important;}
+.product-bg-4{background-image:var(--product-04) !important;}
+.product-bg-5{background-image:var(--product-05) !important;}
+.product-bg-6{background-image:var(--product-06) !important;}
+.product-bg-7{background-image:var(--product-07) !important;}
+.product-bg-8{background-image:var(--product-08) !important;}
+.product-bg-9{background-image:var(--product-09) !important;}
+.product-bg-10{background-image:var(--product-10) !important;}
+
+
+/* ---------------- OEM top banner ---------------- */
+.oem-banner{
+  grid-column:1 / -1;
+  width:100%;
+  min-height:0;
+  aspect-ratio:4 / 1;
+  border-radius:18px;
+  background-image:var(--oem-banner-bg) !important;
+  background-repeat:no-repeat !important;
+  background-position:var(--oem-banner-position) !important;
+  background-size:var(--oem-banner-size) !important;
+  background-color:rgba(255,250,245,.82);
+  box-shadow:var(--shadow);
+  border:1px solid var(--line);
+}
+@media(max-width:1100px){
+  .oem-banner{
+    aspect-ratio:4 / 1;
+  }
+}
+@media(max-width:720px){
+  .oem-banner{
+    aspect-ratio:16 / 5;
+    background-position:var(--oem-banner-position-mobile) !important;
+  }
+}
+
+
+/* ---------------- Learning Hub article backgrounds ---------------- */
+.article-img{
+  background-repeat:no-repeat !important;
+  background-position:var(--learn-position) !important;
+  background-size:var(--learn-size) !important;
+  background-color:#efe7e0;
+}
+.article-img.learn-bg-1{background-image:var(--learn-01) !important;}
+.article-img.learn-bg-2{background-image:var(--learn-02) !important;}
+.article-img.learn-bg-3{background-image:var(--learn-03) !important;}
+.article-img.learn-bg-4{background-image:var(--learn-04) !important;}
+
+
+/* ---------------- Learning Hub article backgrounds / verified fix ---------------- */
+.article-grid .article-img{
+  background-repeat:no-repeat !important;
+  background-position:var(--learn-position) !important;
+  background-size:var(--learn-size) !important;
+  background-color:#efe7e0 !important;
+}
+.article-grid .article-img.learn-bg-1{background-image:var(--learn-01) !important;}
+.article-grid .article-img.learn-bg-2{background-image:var(--learn-02) !important;}
+.article-grid .article-img.learn-bg-3{background-image:var(--learn-03) !important;}
+.article-grid .article-img.learn-bg-4{background-image:var(--learn-04) !important;}
+
+
+/* ---------------- Hero extra bottom strip fix ---------------- */
+.hero{
+  min-height: 0 !important;
+  padding-top: 42px !important;
+  padding-bottom: 20px !important;
+  align-items: flex-start !important;
+}
+.hero-copy{
+  width: 43% !important;
+}
+.trust-row{
+  margin-top: 18px !important;
+  gap: 24px !important;
+}
+@media(max-width:1100px){
+  .hero{
+    min-height: 500px !important;
+    padding-top: 42px !important;
+    padding-bottom: 18px !important;
+  }
+}
+@media(max-width:720px){
+  .hero{
+    min-height: 520px !important;
+    padding-top: 30px !important;
+    padding-bottom: 18px !important;
+  }
+  .trust-row{
+    margin-top: 14px !important;
+    gap: 12px !important;
+  }
+}
+
+
+/* ---------------- Hero bottom background unify fix ---------------- */
+.hero{
+  position: relative !important;
+}
+.hero::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 98px;
+  background: #fbf7f1;
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-copy,
+.trust-row,
+.actions,
+.hero .eyebrow,
+.hero h1,
+.hero p{
+  position: relative;
+  z-index: 2;
+}
+.trust-row{
+  padding-bottom: 6px;
+}
+@media(max-width:1100px){
+  .hero::after{
+    height: 90px;
+  }
+}
+@media(max-width:720px){
+  .hero::after{
+    height: 118px;
+  }
+}
+
+
+/* ---------------- Final Hero refit: use uploaded hero image as full background ---------------- */
+.hero{
+  display:flex !important;
+  align-items:flex-start !important;
+  min-height:440px !important;
+  margin:0 20px 16px !important;
+  padding:48px 72px 22px !important;
+  position:relative !important;
+  overflow:hidden !important;
+  background-image:
+    linear-gradient(90deg,
+      rgba(252,247,243,.97) 0%,
+      rgba(252,247,243,.93) 24%,
+      rgba(252,247,243,.76) 40%,
+      rgba(252,247,243,.32) 57%,
+      rgba(252,247,243,0) 72%
+    ),
+    var(--hero-bg) !important;
+  background-repeat:no-repeat !important;
+  background-position:var(--hero-position) !important;
+  background-size:cover !important;
+}
+.hero::after{
+  display:none !important;
+  content:none !important;
+}
+.hero-copy{
+  position:relative !important;
+  z-index:2 !important;
+  width:43% !important;
+  max-width:430px !important;
+}
+.hero h1{
+  margin:10px 0 14px !important;
+  line-height:1.06 !important;
+}
+.hero p{
+  max-width:410px !important;
+  margin:0 0 12px !important;
+}
+.actions{
+  margin:28px 0 24px !important;
+}
+.trust-row{
+  margin-top:0 !important;
+  gap:28px !important;
+  padding-bottom:0 !important;
+  background:transparent !important;
+}
+.hero-art,
+.crystal,.cluster,.pink,.gold,.blue,.beads,.hero-photo{
+  display:none !important;
+}
+@media(max-width:1100px){
+  .hero{
+    display:block !important;
+    min-height:520px !important;
+    margin:0 16px 20px !important;
+    padding:44px 42px 20px !important;
+    background-image:
+      linear-gradient(180deg,
+        rgba(252,247,243,.97) 0%,
+        rgba(252,247,243,.90) 38%,
+        rgba(252,247,243,.30) 72%,
+        rgba(252,247,243,.06) 100%
+      ),
+      var(--hero-bg) !important;
+    background-position:var(--hero-position-tablet) !important;
+    background-size:cover !important;
+  }
+  .hero-copy{
+    width:auto !important;
+    max-width:460px !important;
+  }
+}
+@media(max-width:720px){
+  .hero{
+    min-height:560px !important;
+    margin:0 12px 18px !important;
+    padding:34px 22px 250px !important;
+    background-image:
+      linear-gradient(180deg,
+        rgba(252,247,243,.98) 0%,
+        rgba(252,247,243,.93) 44%,
+        rgba(252,247,243,.22) 76%,
+        rgba(252,247,243,.04) 100%
+      ),
+      var(--hero-bg) !important;
+    background-position:var(--hero-position-mobile) !important;
+  }
+  .hero-copy{
+    max-width:none !important;
+  }
+  .actions{
+    margin:22px 0 18px !important;
+  }
+  .trust-row{
+    gap:14px !important;
+  }
+}
+
+
+/* ---------------- Final fix: remove purple strip under hero ---------------- */
+.hero::after{
+  display:block !important;
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  right:0 !important;
+  bottom:0 !important;
+  height:24px !important;
+  background:#fbf7f1 !important;
+  z-index:1 !important;
+  pointer-events:none !important;
+}
+.trust-row{
+  position:relative !important;
+  z-index:2 !important;
+  margin-bottom:2px !important;
+}
+@media(max-width:1100px){
+  .hero::after{
+    height:22px !important;
+  }
+}
+@media(max-width:720px){
+  .hero::after{
+    height:18px !important;
+  }
+}
+
+
+/* ---------------- Refined Hero polish ---------------- */
+.hero{
+  display:flex !important;
+  align-items:flex-start !important;
+  min-height:448px !important;
+  margin:0 20px 22px !important;
+  padding:52px 72px 28px !important;
+  overflow:hidden !important;
+  background-image:
+    linear-gradient(90deg,
+      rgba(251,247,241,.985) 0%,
+      rgba(251,247,241,.96) 22%,
+      rgba(251,247,241,.82) 39%,
+      rgba(251,247,241,.42) 56%,
+      rgba(251,247,241,.08) 70%,
+      rgba(251,247,241,0) 78%
+    ),
+    var(--hero-bg) !important;
+  background-repeat:no-repeat !important;
+  background-position:var(--hero-position) !important;
+  background-size:cover !important;
+  box-shadow:0 18px 36px rgba(83,44,109,.08) !important;
+}
+.hero::before{display:none !important;content:none !important;}
+.hero::after{
+  display:block !important;
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  right:0 !important;
+  bottom:0 !important;
+  height:46px !important;
+  background:linear-gradient(180deg,
+    rgba(251,247,241,0) 0%,
+    rgba(251,247,241,.74) 42%,
+    rgba(251,247,241,.96) 74%,
+    #fbf7f1 100%) !important;
+  z-index:1 !important;
+  pointer-events:none !important;
+}
+.hero-copy,
+.hero .eyebrow,
+.hero h1,
+.hero p,
+.actions,
+.trust-row{
+  position:relative !important;
+  z-index:3 !important;
+}
+.hero-copy{
+  width:42% !important;
+  max-width:440px !important;
+}
+.hero .eyebrow{
+  margin:0 0 10px !important;
+  font-size:14px !important;
+  letter-spacing:.15em !important;
+  color:#5f536a !important;
+}
+.hero h1{
+  margin:0 0 16px !important;
+  font-size:60px !important;
+  line-height:.98 !important;
+  color:#5d2f7f !important;
+}
+.hero p{
+  max-width:430px !important;
+  margin:0 !important;
+  font-size:16px !important;
+  line-height:1.65 !important;
+  color:#5f5668 !important;
+}
+.actions{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:16px !important;
+  margin:30px 0 24px !important;
+}
+.actions .btn{
+  min-width:200px !important;
+  padding:14px 22px !important;
+  border-radius:8px !important;
+  box-shadow:0 10px 22px rgba(111,63,145,.10) !important;
+}
+.actions .btn.primary{
+  background:#7440a0 !important;
+}
+.actions .btn.secondary{
+  background:rgba(255,250,245,.62) !important;
+  border:1px solid rgba(201,147,76,.75) !important;
+}
+.trust-row{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:12px !important;
+  margin-top:0 !important;
+  padding-bottom:4px !important;
+  margin-bottom:0 !important;
+  background:transparent !important;
+}
+.trust-row span{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:8px !important;
+  padding:8px 14px !important;
+  border-radius:999px !important;
+  background:rgba(255,251,247,.72) !important;
+  border:1px solid rgba(201,147,76,.16) !important;
+  box-shadow:0 8px 18px rgba(88,58,105,.06) !important;
+  backdrop-filter:blur(4px) !important;
+  color:#564b61 !important;
+  font-size:13px !important;
+  font-weight:700 !important;
+}
+@media(max-width:1100px){
+  .hero{
+    display:block !important;
+    min-height:530px !important;
+    margin:0 16px 22px !important;
+    padding:46px 42px 24px !important;
+    background-image:
+      linear-gradient(180deg,
+        rgba(251,247,241,.98) 0%,
+        rgba(251,247,241,.93) 38%,
+        rgba(251,247,241,.48) 62%,
+        rgba(251,247,241,.12) 84%,
+        rgba(251,247,241,.02) 100%
+      ),
+      var(--hero-bg) !important;
+    background-position:var(--hero-position-tablet) !important;
+  }
+  .hero::after{
+    height:38px !important;
+  }
+  .hero-copy{
+    width:auto !important;
+    max-width:470px !important;
+  }
+  .hero h1{
+    font-size:54px !important;
+  }
+}
+@media(max-width:720px){
+  .hero{
+    min-height:575px !important;
+    margin:0 12px 20px !important;
+    padding:34px 22px 245px !important;
+    background-image:
+      linear-gradient(180deg,
+        rgba(251,247,241,.985) 0%,
+        rgba(251,247,241,.94) 45%,
+        rgba(251,247,241,.36) 74%,
+        rgba(251,247,241,.08) 100%
+      ),
+      var(--hero-bg) !important;
+    background-position:var(--hero-position-mobile) !important;
+  }
+  .hero::after{
+    height:28px !important;
+  }
+  .hero h1{
+    font-size:42px !important;
+    line-height:1.02 !important;
+  }
+  .hero p{
+    font-size:15px !important;
+    max-width:none !important;
+  }
+  .actions{
+    gap:12px !important;
+    margin:22px 0 16px !important;
+  }
+  .actions .btn{
+    min-width:unset !important;
+    flex:1 1 220px !important;
+  }
+  .trust-row{
+    gap:10px !important;
+  }
+  .trust-row span{
+    font-size:12px !important;
+    padding:7px 12px !important;
+  }
+}
+
+
+/* ---------------- Bracelet visibility focused hero tweak ---------------- */
+.hero::after{
+  height:24px !important;
+  background:linear-gradient(180deg,
+    rgba(251,247,241,0) 0%,
+    rgba(251,247,241,.42) 58%,
+    rgba(251,247,241,.82) 86%,
+    #fbf7f1 100%) !important;
+}
+.hero{
+  padding-bottom:24px !important;
+}
+.trust-row{
+  padding-bottom:0 !important;
+}
+@media(max-width:1100px){
+  .hero::after{
+    height:20px !important;
+  }
+}
+@media(max-width:720px){
+  .hero::after{
+    height:16px !important;
+  }
+}
+
+
+/* ---------------- Final hero replacement: no purple border ---------------- */
+.hero{
+  background-color:#fbf7f1 !important;
+}
+.hero::after{
+  display:block !important;
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  right:0 !important;
+  bottom:0 !important;
+  height:18px !important;
+  background:#fbf7f1 !important;
+  z-index:1 !important;
+  pointer-events:none !important;
+}
+.hero-copy,
+.actions,
+.trust-row,
+.hero .eyebrow,
+.hero h1,
+.hero p{
+  position:relative !important;
+  z-index:2 !important;
+}
+.trust-row{
+  background:transparent !important;
+  margin-bottom:0 !important;
+  padding-bottom:0 !important;
+}
+@media(max-width:1100px){
+  .hero::after{
+    height:16px !important;
+  }
+}
+@media(max-width:720px){
+  .hero::after{
+    height:14px !important;
+  }
+}
+
+
+/* ---------------- Final hero fit optimization: remove bottom strip cleanly ---------------- */
+.hero{
+  min-height:438px !important;
+  padding:52px 72px 14px !important;
+  background-color:#fbf7f1 !important;
+  background-position:var(--hero-position) !important;
+  background-size:cover !important;
+}
+.hero::after{
+  display:block !important;
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  right:0 !important;
+  bottom:0 !important;
+  height:30px !important;
+  background:#fbf7f1 !important;
+  box-shadow:0 -2px 0 #fbf7f1 inset !important;
+  z-index:1 !important;
+  pointer-events:none !important;
+}
+.hero-copy,
+.actions,
+.trust-row,
+.hero .eyebrow,
+.hero h1,
+.hero p{
+  position:relative !important;
+  z-index:2 !important;
+}
+.trust-row{
+  margin:12px 0 0 !important;
+  padding:0 !important;
+  gap:12px !important;
+  background:transparent !important;
+}
+.trust-row span{
+  background:rgba(255,251,247,.88) !important;
+}
+@media(max-width:1100px){
+  .hero{
+    min-height:510px !important;
+    padding:46px 42px 12px !important;
+    background-position:var(--hero-position-tablet) !important;
+  }
+  .hero::after{
+    height:24px !important;
+  }
+}
+@media(max-width:720px){
+  .hero{
+    min-height:560px !important;
+    padding:34px 22px 226px !important;
+    background-position:var(--hero-position-mobile) !important;
+  }
+  .hero::after{
+    height:18px !important;
+  }
+}
+
+
+/* ---------------- Final fix: remove the visible bottom band under hero ----------------
+   Reason: the earlier .hero::after overlay was used to cover a purple seam,
+   but it also creates a visible pale/white band at the bottom of the hero.
+   This disables that band and lets the hero image fill the whole module.
+*/
+.hero{
+  min-height: 448px !important;
+  padding-bottom: 24px !important;
+  margin-bottom: 22px !important;
+  background-color: transparent !important;
+  background-position: var(--hero-position) !important;
+  background-size: cover !important;
+}
+.hero::after{
+  display: none !important;
+  content: none !important;
+}
+.trust-row{
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  background: transparent !important;
+}
+@media(max-width:1100px){
+  .hero{
+    min-height: 520px !important;
+    padding-bottom: 20px !important;
+  }
+  .hero::after{
+    display: none !important;
+    content: none !important;
+  }
+}
+@media(max-width:720px){
+  .hero{
+    min-height: 560px !important;
+    padding-bottom: 230px !important;
+  }
+  .hero::after{
+    display: none !important;
+    content: none !important;
+  }
+}
+
+/* =====================================================================
+   Definitive hero background fix
+   Purpose:
+   1) keep hero background fully covering the module
+   2) remove bottom white/purple band
+   3) keep bracelet visible
+   4) separate image positioning from overlay so no seam appears
+   ===================================================================== */
+.hero{
+  position:relative !important;
+  overflow:hidden !important;
+  isolation:isolate !important;
+  display:flex !important;
+  align-items:center !important;
+  min-height:448px !important;
+  margin:0 20px 24px !important;
+  padding:52px 72px 30px !important;
+  background:#fcf7f3 !important;
+  border-radius:0 !important;
+}
+.hero::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  background-image:var(--hero-bg) !important;
+  background-repeat:no-repeat !important;
+  background-size:cover !important;
+  background-position:var(--hero-position) !important;
+  z-index:0 !important;
+}
+.hero::after{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  background:linear-gradient(90deg,
+    rgba(252,247,243,.98) 0%,
+    rgba(252,247,243,.95) 25%,
+    rgba(252,247,243,.82) 40%,
+    rgba(252,247,243,.45) 55%,
+    rgba(252,247,243,.08) 68%,
+    rgba(252,247,243,0) 76%
+  ) !important;
+  z-index:1 !important;
+  pointer-events:none !important;
+}
+.hero-copy,
+.hero-copy *{
+  position:relative !important;
+  z-index:2 !important;
+}
+.hero-copy{
+  max-width:430px !important;
+  width:43% !important;
+}
+.hero-art,
+.crystal,
+.cluster,
+.pink,
+.gold,
+.blue,
+.beads,
+.hero-photo{
+  display:none !important;
+}
+.actions{
+  margin:24px 0 28px !important;
+}
+.trust-row{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:12px 14px !important;
+  margin:0 !important;
+  padding:0 !important;
+  background:transparent !important;
+}
+.trust-row span{
+  display:inline-flex !important;
+  align-items:center !important;
+  padding:10px 16px !important;
+  border-radius:999px !important;
+  background:rgba(255,251,247,.92) !important;
+  border:1px solid rgba(234,223,213,.92) !important;
+  box-shadow:0 8px 18px rgba(76,35,90,.06) !important;
+}
+
+@media(max-width:1100px){
+  .hero{
+    display:block !important;
+    min-height:530px !important;
+    margin:0 16px 22px !important;
+    padding:48px 42px 28px !important;
+  }
+  .hero::before{
+    background-position:var(--hero-position-tablet) !important;
+  }
+  .hero::after{
+    background:linear-gradient(180deg,
+      rgba(252,247,243,.98) 0%,
+      rgba(252,247,243,.94) 36%,
+      rgba(252,247,243,.58) 62%,
+      rgba(252,247,243,.18) 82%,
+      rgba(252,247,243,0) 100%
+    ) !important;
+  }
+  .hero-copy{
+    max-width:460px !important;
+    width:auto !important;
+  }
+}
+
+@media(max-width:720px){
+  .hero{
+    min-height:580px !important;
+    margin:0 12px 20px !important;
+    padding:34px 22px 220px !important;
+  }
+  .hero::before{
+    background-position:var(--hero-position-mobile) !important;
+  }
+  .hero::after{
+    background:linear-gradient(180deg,
+      rgba(252,247,243,.99) 0%,
+      rgba(252,247,243,.95) 42%,
+      rgba(252,247,243,.52) 66%,
+      rgba(252,247,243,.12) 84%,
+      rgba(252,247,243,0) 100%
+    ) !important;
+  }
+  .hero-copy{
+    max-width:none !important;
+    width:auto !important;
+  }
+  .trust-row span{
+    padding:9px 14px !important;
+  }
+}
+
+
+/* ---------------- Restore hero image after logo update ----------------
+   Older CSS had .hero::before { display:none !important; }.
+   The hero background is now on ::before, so it must be explicitly displayed.
+*/
+.hero::before{
+  display:block !important;
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  background-image:var(--hero-bg) !important;
+  background-repeat:no-repeat !important;
+  background-size:cover !important;
+  background-position:var(--hero-position) !important;
+  z-index:0 !important;
+  pointer-events:none !important;
+}
+.hero{
+  position:relative !important;
+  overflow:hidden !important;
+  background:#fcf7f3 !important;
+}
+.hero::after{
+  display:block !important;
+}
+.hero-copy,
+.hero-copy *{
+  position:relative !important;
+  z-index:2 !important;
+}
+@media(max-width:1100px){
+  .hero::before{
+    background-position:var(--hero-position-tablet) !important;
+  }
+}
+@media(max-width:720px){
+  .hero::before{
+    background-position:var(--hero-position-mobile) !important;
+  }
+}
+
+
+/* ---------------- Learning Hub product backgrounds final fix ----------------
+   Use CSS background images (not <img>) and fill the card width without left/right blank space.
+   The source images are pre-cropped to the same aspect ratio as the card so products remain visible.
+*/
+.article-grid article{
+  overflow:hidden !important;
+}
+.article-grid .article-img{
+  height:auto !important;
+  aspect-ratio: 16 / 7.2 !important;
+  background-repeat:no-repeat !important;
+  background-size:cover !important;
+  background-position:center center !important;
+  background-color:#f7f1ea !important;
+  border-radius:14px !important;
+}
+.article-grid .article-img.learn-bg-1{background-image:var(--learn-01) !important;}
+.article-grid .article-img.learn-bg-2{background-image:var(--learn-02) !important;}
+.article-grid .article-img.learn-bg-3{background-image:var(--learn-03) !important;}
+.article-grid .article-img.learn-bg-4{background-image:var(--learn-04) !important;}
+
+@media(max-width:1100px){
+  .article-grid .article-img{
+    aspect-ratio:16 / 7.2 !important;
+  }
+}
+@media(max-width:720px){
+  .article-grid .article-img{
+    aspect-ratio:16 / 8 !important;
+  }
+}
