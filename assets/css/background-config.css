@@ -1242,3 +1242,20 @@ assets/css/background-config.css
     gap: 6px !important;
   }
 }
+
+/* =====================================================================
+   Custom Visual & Spacing Adjustments
+   ===================================================================== */
+
+/* 1. Fix text layout & vertical spacing for hero heading to avoid overlap and crowd */
+.hero h1 {
+  line-height: 1.25 !important;
+}
+
+/* 2. Shift the trust badges upward on desktop/tablet to prevent conflict with bottom white border */
+@media(min-width: 721px) {
+  .trust-row {
+    transform: translateY(-16px) !important;
+  }
+}
+
