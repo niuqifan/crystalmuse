@@ -1125,3 +1125,16 @@ assets/css/background-config.css
     aspect-ratio:16 / 8 !important;
   }
 }
+
+/* --- Factory display banner styles --- */
+.factory-banner {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+.factory-banner img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
