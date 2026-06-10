@@ -1132,11 +1132,35 @@ assets/css/background-config.css
   margin: 0 !important;
   padding: 0 !important;
   overflow: hidden !important;
+  position: relative !important;
 }
 .factory-banner img {
   width: 100% !important;
   height: auto !important;
   display: block !important;
+}
+.factory-banner-btn {
+  position: absolute !important;
+  display: block !important;
+  z-index: 10 !important;
+  cursor: pointer !important;
+  background: transparent !important;
+  transition: background 0.2s ease !important;
+}
+.factory-banner-btn:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+.factory-banner .oem-btn {
+  left: 6.95% !important;
+  top: 80.91% !important;
+  width: 24.99% !important;
+  height: 17.95% !important;
+}
+.factory-banner .quote-btn {
+  left: 32.26% !important;
+  top: 80.91% !important;
+  width: 13.12% !important;
+  height: 17.95% !important;
 }
 
 
