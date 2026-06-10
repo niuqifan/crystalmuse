@@ -1249,7 +1249,8 @@ assets/css/background-config.css
 
 /* 1. Fix text layout & vertical spacing for hero heading to avoid overlap and crowd */
 .hero h1 {
-  line-height: 1.25 !important;
+  font-size: 46px !important; /* 优雅微调字号，让原本强制 6 行的布局舒展成最美观的 3 行排版 */
+  line-height: 1.25 !important; /* 提供充足的艺术呼吸空间，彻底告别粘连 */
 }
 
 /* 2. Shift the trust badges upward on desktop/tablet to prevent conflict with bottom white border */
