@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 950" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff4f6"/><stop offset=".45" stop-color="#f8e4ee"/><stop offset="1" stop-color="#fff9ef"/></linearGradient>
+    <radialGradient id="glow1" cx="58%" cy="26%" r="52%"><stop offset="0" stop-color="#ffffff" stop-opacity=".82"/><stop offset=".42" stop-color="#f2d8ee" stop-opacity=".42"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glow2" cx="86%" cy="42%" r="45%"><stop offset="0" stop-color="#d9b6ec" stop-opacity=".55"/><stop offset=".55" stop-color="#fff0f4" stop-opacity=".30"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+    <linearGradient id="purpleCrystal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".86"/><stop offset=".38" stop-color="#d0a5e1" stop-opacity=".88"/><stop offset="1" stop-color="#64308e" stop-opacity=".94"/></linearGradient>
+    <linearGradient id="pinkCrystal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".85"/><stop offset=".46" stop-color="#f6cad8" stop-opacity=".86"/><stop offset="1" stop-color="#e4a4b8" stop-opacity=".82"/></linearGradient>
+    <linearGradient id="goldCrystal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff8e8"/><stop offset=".55" stop-color="#d8ad6a"/><stop offset="1" stop-color="#b9823b"/></linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+  <rect width="1600" height="950" fill="url(#bg)"/>
+  <rect width="1600" height="950" fill="url(#glow1)"/>
+  <rect width="1600" height="950" fill="url(#glow2)"/>
+  <g opacity=".22" stroke="#ffffff" stroke-width="2">
+    <path d="M0 708 C 220 600, 350 760, 590 668 S 940 596, 1178 710 S 1430 762, 1600 650" fill="none"/>
+    <path d="M0 770 C 180 690, 410 826, 620 724 S 1000 690, 1230 782 S 1450 835, 1600 746" fill="none"/>
+  </g>
+  <g opacity=".23" fill="#fff" filter="url(#soft)"><circle cx="330" cy="235" r="90"/><circle cx="650" cy="172" r="64"/><circle cx="1320" cy="230" r="125"/></g>
+  <g opacity=".52">
+    <rect x="760" y="620" width="720" height="86" rx="20" fill="#ffffff"/>
+    <rect x="840" y="510" width="190" height="110" rx="14" fill="#fff8f0"/>
+    <rect x="1065" y="482" width="240" height="138" rx="14" fill="#ffffff"/>
+    <rect x="1340" y="524" width="165" height="96" rx="14" fill="#fff8f0"/>
+    <path d="M800 618h680" stroke="#d8ad6a" stroke-opacity=".32" stroke-width="4"/>
+  </g>
+  <g transform="translate(1015 176)" opacity=".95">
+    <polygon points="165,0 250,150 190,430 88,430 28,150" fill="url(#purpleCrystal)"/>
+    <polyline points="165,0 160,430" stroke="#fff" stroke-opacity=".42" stroke-width="2" fill="none"/>
+    <polyline points="28,150 160,430 250,150" stroke="#fff" stroke-opacity=".25" stroke-width="2" fill="none"/>
+  </g>
+  <g transform="translate(1192 312)" opacity=".86">
+    <polygon points="116,0 188,112 154,318 55,318 10,112" fill="url(#pinkCrystal)"/>
+    <polyline points="116,0 108,318" stroke="#fff" stroke-opacity=".38" stroke-width="2" fill="none"/>
+  </g>
+  <g transform="translate(1370 170)" opacity=".82">
+    <polygon points="90,0 152,122 126,350 45,350 5,122" fill="url(#goldCrystal)"/>
+    <polyline points="90,0 88,350" stroke="#fff" stroke-opacity=".36" stroke-width="2" fill="none"/>
+  </g>
+  <g opacity=".34" stroke="#b9823b" stroke-width="3" fill="none"><path d="M1132 230c-95 24-152 72-150 143 2 91 132 126 265 108 108-15 166-65 156-129-10-66-111-107-271-122z"/><path d="M1122 254c80 54 172 63 274 34"/></g>
+  <g fill="#ffffff" opacity=".78"><circle cx="598" cy="188" r="4"/><circle cx="668" cy="248" r="3"/><circle cx="1410" cy="148" r="4"/><circle cx="1188" cy="132" r="3"/><circle cx="910" cy="92" r="3"/><circle cx="315" cy="410" r="3"/><circle cx="760" cy="354" r="5"/><circle cx="1280" cy="508" r="4"/></g>
+  <rect width="1600" height="950" fill="#fff" opacity=".18"/>
+</svg>

@@ -1,278 +1,206 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OEM & Wholesale Crystal Products Manufacturer | AURANOVAGEMS</title>
-  <meta name="description" content="Partner with AURANOVAGEMS for professional OEM/ODM crystal solutions. Premium natural gemstones, custom-carved carvings, towers, spheres, and healing crystal products in bulk with low MOQ, 7-day fast sampling, and premium custom packaging." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../assets/css/background-config.css" />
-  <style>
-    /* 针对 OEM 落地页的专属样式补强 */
-    .oem-hero {
-      background: linear-gradient(135deg, rgba(30,30,30,0.85) 0%, rgba(50,50,50,0.6) 100%), url('https://sc02.alicdn.com/kf/H49077fb4f8894d57879c752c5fa6b728X.png') no-repeat center center/cover;
-      color: #fff;
-      padding: 120px 20px;
-      text-align: center;
-    }
-    .oem-hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #fff;
-    }
-    .oem-hero p {
-      font-size: 1.25rem;
-      max-width: 800px;
-      margin: 0 auto 40px auto;
-      line-height: 1.6;
-    }
-    .grid-customize {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    .customize-card {
-      background: #fdfdfd;
-      padding: 30px;
-      border-radius: 8px;
-      border: 1px solid #eaeaea;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-      transition: transform 0.3s ease;
-    }
-    .customize-card:hover {
-      transform: translateY(-5px);
-    }
-    .customize-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-      color: #333;
-    }
-    .customize-card ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      text-align: left;
-    }
-    .customize-card li {
-      padding: 8px 0;
-      border-bottom: 1px solid #f5f5f5;
-      color: #666;
-      font-size: 0.95rem;
-    }
-    .customize-card li:last-child {
-      border-bottom: none;
-    }
-    .qc-section {
-      background: #f9f9f9;
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .qc-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: 40px auto 0 auto;
-    }
-    .qc-step {
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      border: 1px solid #eee;
-    }
-    .qc-step .step-num {
-      font-size: 2.5rem;
-      font-family: 'Playfair Display', serif;
-      color: #bfa37a;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    .qc-step h4 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: #222;
-    }
-    .qc-step p {
-      font-size: 0.9rem;
-      color: #666;
-      line-height: 1.5;
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OEM & Wholesale Crystal Solutions | Direct Sourcing | AURANOVAGEMS</title>
+  <meta name="description" content="OEM and wholesale crystal solutions for crystal brands, retailers, gift shops and spiritual businesses. Direct sourcing, 50+ natural materials, private label, gift packaging, 7-day sampling and piece-by-piece QC.">
+  <link rel="canonical" href="https://auranovagems.com/oem-wholesale-crystals/">
+  <link rel="stylesheet" href="assets/css/oem-wholesale.css">
 </head>
 <body>
-  <div class="topbar">
-    <span>✦ Worldwide Shipping</span>
-    <span>★ 500+ 5-Star Reviews</span>
-    <span>✉ info@auranovagems.com</span>
-  </div>
-
-  <header class="navbar">
-    <a href="../#home" class="brand">
-      <span class="logo logo-mark" aria-hidden="true"></span>
-      <span><strong>AURANOVAGEMS</strong><small>Healing Energy</small></span>
-    </a>
-    <nav>
-      <a href="../#intention">Intention</a>
-      <a href="../#chakra">Chakra</a>
-      <a href="../#zodiac">Zodiac</a>
-      <a href="../#catalog">Collections</a>
-      <a href="../#learn">Learn</a>
-      <a href="../#contact">About Us</a>
-      <a href="../#oem">OEM & Wholesale</a>
-    </nav>
-    <button class="inquiry-btn" id="openInquiry">Get Free Quote<span id="inquiryCount" style="display:none !important;">0</span></button>
+  <div class="topbar"><div class="container"><span>✦ Worldwide Shipping</span><span>★ 500+ 5-Star Reviews</span><span>✉ info@auranovagems.com</span></div></div>
+  <header class="nav">
+    <div class="container">
+      <a class="brand" href="/">AURANOVAGEMS</a>
+      <nav class="navlinks" aria-label="Primary navigation">
+        <a href="/">Home</a><a href="/#collections">Collections</a><a href="/#learn">Learn</a><a href="/#about">About Us</a><a href="#inquiry">OEM & Wholesale</a>
+      </nav>
+      <a class="btn btn-primary" href="#inquiry">Get Free Quote</a>
+    </div>
   </header>
 
   <main>
-    <!-- OEM Hero Section -->
-    <section class="oem-hero">
-      <p class="eyebrow" style="color: #bfa37a; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Tailored Crystal Supply Chain</p>
-      <h1>OEM & Private Label Crystal Solutions</h1>
-      <p>We are a premier natural crystal sourcing factory with 10+ years of export experience. From custom gemstone carvings to retail-ready private label bracelets, we bring your spiritual brand concept to life with exceptionally low MOQs and rapid turnaround times.</p>
-      <div class="actions">
-        <a class="btn primary" href="#oemInquiryForm" style="background-color: #bfa37a; border-color: #bfa37a;">Start Your OEM Project</a>
-        <a class="btn secondary" href="../whatsapp.html" style="color: #fff; border-color: #fff;">Talk on WhatsApp</a>
+    <section class="hero" aria-label="OEM wholesale crystal hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Direct Sourcing · Factory Customization</span>
+          <h1>OEM & Wholesale Crystal Solutions</h1>
+          <p>Build your crystal product line with direct sourcing, natural materials, private label finishing, export-grade packaging and fast sampling for B2B buyers.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#inquiry">Start OEM Inquiry</a>
+            <a class="btn btn-ghost" href="#process">View 5-Step Process</a>
+          </div>
+          <div class="trust-row" aria-label="Trust badges">
+            <span class="trust-pill">50+ Natural Materials</span>
+            <span class="trust-pill">7-Day Sample Option</span>
+            <span class="trust-pill">Piece-by-Piece QC</span>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Wholesale highlights">
+          <h3>For Brands, Retailers & Gift Buyers</h3>
+          <div class="spec-list">
+            <div class="spec"><span>Product Range</span><strong>Bracelets, Towers, Spheres, Sets</strong></div>
+            <div class="spec"><span>Custom Options</span><strong>Logo, Plating, Cards, Boxes</strong></div>
+            <div class="spec"><span>Sample Lead Time</span><strong>From 7 Days</strong></div>
+            <div class="spec"><span>Packaging</span><strong>Foam Shockproof Export Packing</strong></div>
+            <div class="spec"><span>Support</span><strong>Quote by Email / WhatsApp</strong></div>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <!-- Factory Capabilities -->
-    <section class="section" style="max-width: 1200px; margin: 0 auto; padding: 80px 20px;">
-      <div class="section-title">
-        <span></span>
-        <h2>What We Can Customize</h2>
-        <span></span>
-      </div>
-      <p style="text-align: center; color: #666; max-width: 700px; margin: 0 auto 40px auto; line-height: 1.6;">
-        Every single product in our catalog can be fully personalized to align with your brand visual identity and spiritual intention.
-      </p>
-      <div class="grid-customize">
-        <div class="customize-card">
-          <h3>1. Crystal Materials</h3>
-          <ul>
-            <li>✦ 50+ Premium Natural Gemstones (Amethyst, Rose Quartz, Citrine, Obsidian, etc.)</li>
-            <li>✦ 100% Ethically Sourced & Certified Natural Minerals</li>
-            <li>✦ Various Bead Sizes: 4mm, 6mm, 8mm, 10mm, 12mm, 14mm</li>
-          </ul>
+    <section class="section" id="custom">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Customizable Dimensions</span><h2>Everything Your Crystal Brand Needs</h2></div>
+          <p class="section-lead">From raw material selection to premium gift presentation, we help you turn ideas into sellable crystal products with flexible OEM choices.</p>
         </div>
-        <div class="customize-card">
-          <h3>2. Private Label Branding</h3>
-          <ul>
-            <li>✦ Custom Printed Intention Cards with Your Brand Logo</li>
-            <li>✦ Engraved Brand Logo on Metal Charms or Bead Spacers</li>
-            <li>✦ Branded Velvet Pouches, Organza Bags & Cotton Envelopes</li>
-            <li>✦ Custom Hot-Stamped Rigid Gift Boxes (Gold / Silver Foil)</li>
-          </ul>
-        </div>
-        <div class="customize-card">
-          <h3>3. Custom Products & Sets</h3>
-          <ul>
-            <li>✦ Custom Zodiac Astrological Gift Sets</li>
-            <li>✦ Custom 7 Chakra Healing Crystal Sets with Wooden Trays</li>
-            <li>✦ Specialized Carvings, Obelisks, Towers & Spheres</li>
-            <li>✦ Customized Barcode Stickers & Retail Packaging Insert Cards</li>
-          </ul>
+        <div class="cards">
+          <article class="card"><div class="icon">◇</div><h3>50+ Natural Materials</h3><p>Amethyst, rose quartz, clear quartz, citrine, obsidian, tiger eye, labradorite, fluorite, aventurine and more natural stones for different intentions and price tiers.</p></article>
+          <article class="card"><div class="icon">✦</div><h3>Private Label Craft</h3><p>Brand logo cards, metal logo tags, electroplated accents, bead charms and retail-ready identity details for a more premium shelf presence.</p></article>
+          <article class="card"><div class="icon">▣</div><h3>Luxury Gift Packaging</h3><p>Custom rigid boxes, velvet pouches, insert cards, barcodes, care cards and display-ready gift sets for online stores and retail channels.</p></article>
+          <article class="card"><div class="icon">◎</div><h3>Custom Crystal Sets</h3><p>Create chakra sets, intention kits, zodiac boxes, meditation bundles, home décor assortments or seasonal gift collections.</p></article>
+          <article class="card"><div class="icon">☉</div><h3>Flexible Trial Orders</h3><p>Start with focused SKUs, validate demand, then scale into recurring wholesale production with consistent sourcing and packaging standards.</p></article>
+          <article class="card"><div class="icon">✧</div><h3>Direct Sourcing Advantage</h3><p>Fewer middle steps, faster communication and practical cost control for buyers who need stable supply, customization and export support.</p></article>
         </div>
       </div>
     </section>
 
-    <!-- Strict 4-Step Quality Control -->
-    <section class="qc-section">
-      <div class="section-title">
-        <span></span>
-        <h2>Strict 4-Step Quality Control (QC)</h2>
-        <span></span>
-      </div>
-      <p style="text-align: center; color: #666; max-width: 700px; margin: 0 auto 40px auto; line-height: 1.6;">
-        We understand B2B buyers concern about crystal quality, breakage, and authenticity. Our rigorous internal QC system guarantees every shipment arrives perfect.
-      </p>
-      <div class="qc-grid">
-        <div class="qc-step">
-          <div class="step-num">01</div>
-          <h4>Raw Stone Sourcing</h4>
-          <p>We source rough gems directly from certified ethical mines worldwide. Only flawless, natural mine-run materials enter our facility.</p>
+
+
+    <section class="section visual-story" id="factory">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Factory & Workshop</span><h2>See Our Crystal Team at Work</h2></div>
+          <p class="section-lead">These workshop visuals help buyers quickly understand our production environment, careful handling and real OEM packaging workflow.</p>
         </div>
-        <div class="qc-step">
-          <div class="step-num">02</div>
-          <h4>Hand-Selected Crafting</h4>
-          <p>Our experienced artisans carve, shape, and polish every crystal by hand, filtering out stones with obvious cracks or impurities.</p>
-        </div>
-        <div class="qc-step">
-          <div class="step-num">03</div>
-          <h4>Double-Inspection</h4>
-          <p>Before packaging, our specialized QA inspectors review every product piece-by-piece to ensure perfect size, sheen, and dimensions.</p>
-        </div>
-        <div class="qc-step">
-          <div class="step-num">04</div>
-          <h4>Secured Export Packing</h4>
-          <p>Using custom shock-proof thick boxes, customized foam grids, and thick bubble wraps to prevent any transit collision or breakage.</p>
+        <div class="media-split">
+          <figure class="media-card media-card-lg">
+            <img src="assets/img/qc-inspection-02.png" alt="Crystal quality inspection in workshop">
+            <figcaption>Detailed crystal inspection helps us review color, clarity, sizing and polishing consistency before final approval.</figcaption>
+          </figure>
+          <div class="media-stack">
+            <figure class="media-card">
+              <img src="assets/img/factory-workshop-01.png" alt="Auranovagems crystal workshop scene">
+              <figcaption>A bright, organized workshop where bracelets, towers and curated crystal products are assembled and sorted.</figcaption>
+            </figure>
+            <figure class="media-card">
+              <img src="assets/img/packing-workstation-04.png" alt="Crystal products being packed in boxes">
+              <figcaption>Gift boxes, foam inserts and protective materials are prepared side by side for smooth batch packing.</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Our OEM Sourcing Flow -->
-    <section class="section" style="max-width: 1200px; margin: 0 auto; padding: 80px 20px; text-align: center;">
-      <div class="section-title">
-        <span></span>
-        <h2>Fast OEM Sourcing Process</h2>
-        <span></span>
-      </div>
-      <div class="process" style="margin-top: 40px; justify-content: center;">
-        <div><b>1</b><span>Inquiry</span></div>
-        <div><b>2</b><span>Quotation</span></div>
-        <div><b>3</b><span>Sample (7 Days)</span></div>
-        <div><b>4</b><span>Production</span></div>
-        <div><b>5</b><span>Global Delivery</span></div>
+    <section class="section dark-band" id="qc">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">4-Step Quality Control</span><h2>Piece-by-Piece Review Before Shipment</h2></div>
+          <p class="section-lead">Designed to reduce first-order concerns for large buyers: each order is checked through appearance, sizing, customization and protective export packing.</p>
+        </div>
+        <div class="qc-grid">
+          <article class="qc-card"><div class="qc-num">1</div><div><h3>Material & Color Selection</h3><p>Confirm stone type, tone, texture and natural variation against your order requirements before processing.</p></div></article>
+          <article class="qc-card"><div class="qc-num">2</div><div><h3>Shape, Size & Craft Check</h3><p>Inspect product dimensions, polishing, drilling, bead matching, engraving or electroplated logo details.</p></div></article>
+          <article class="qc-card"><div class="qc-num">3</div><div><h3>Piece-by-Piece Final Review</h3><p>Each finished piece is reviewed individually to remove visible defects and protect the consistency of your wholesale batch.</p></div></article>
+          <article class="qc-card"><div class="qc-num">4</div><div><h3>Foam Shockproof Export Packing</h3><p>Use protective foam, inner wrapping and carton reinforcement to help reduce breakage risk during international delivery.</p></div></article>
+        </div>
+
       </div>
     </section>
 
-    <!-- Sourcing FAQ -->
-    <section class="section" style="max-width: 800px; margin: 0 auto; padding: 60px 20px;">
-      <div class="section-title" style="margin-bottom: 40px;">
-        <span></span>
-        <h2>Sourcing FAQs</h2>
-        <span></span>
-      </div>
-      <div style="text-align: left;">
-        <h4 style="font-size: 1.1rem; margin-bottom: 5px; color: #222;">✦ What is your MOQ for private label orders?</h4>
-        <p style="color: #666; margin-bottom: 25px; line-height: 1.5; font-size: 0.95rem;">Our MOQ for custom crystal bracelets with private label boxes/logo cards is typically 50-100 pieces per style. For bulk raw stones or standard towers, trial orders starting at 20-30 pieces can be accommodated.</p>
-        
-        <h4 style="font-size: 1.1rem; margin-bottom: 5px; color: #222;">✦ Can you provide a certification for 100% natural crystals?</h4>
-        <p style="color: #666; margin-bottom: 25px; line-height: 1.5; font-size: 0.95rem;">Yes! All our crystals are verified by third-party gemstone testing institutes. We can provide standard testing reports for bulk orders upon request.</p>
-
-        <h4 style="font-size: 1.1rem; margin-bottom: 5px; color: #222;">✦ What is the typical lead time for custom samples?</h4>
-        <p style="color: #666; margin-bottom: 25px; line-height: 1.5; font-size: 0.95rem;">Sample layout and production take about 5-7 business days. Standard air freight takes 5-9 days to most countries worldwide (USA, Europe, SE Asia).</p>
+    <section class="section packaging-showcase" id="packaging-showcase">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Packaging Showcase</span><h2>Premium Presentation, Gift-Ready Finishing</h2></div>
+          <p class="section-lead">From private-label inserts to premium rigid boxes, these images show how your products can look when they are ready for retail or gifting.</p>
+        </div>
+        <div class="packaging-grid">
+          <figure class="media-card">
+            <img src="assets/img/packing-closeup-03.png" alt="Luxury crystal gift box closeup">
+            <figcaption>Close-up view of premium crystal gift packaging with branded inserts, crystal towers and bracelet presentation.</figcaption>
+          </figure>
+          <figure class="media-card">
+            <img src="assets/img/gift-display-05.png" alt="Crystal products in elegant packaging display">
+            <figcaption>Elegant product display suitable for product pages, gifting campaigns and retail presentation.</figcaption>
+          </figure>
+          <figure class="media-card">
+            <img src="assets/img/gift-display-06.png" alt="Branded crystal gift boxes and pouches">
+            <figcaption>Mixed packaging formats including pouches, boxes, care cards and curated crystal gift sets.</figcaption>
+          </figure>
+        </div>
+        <div class="ship-ready">
+          <figure class="ship-ready-media">
+            <img src="assets/img/wholesale-display-07.png" alt="Wholesale ready packed crystal orders">
+          </figure>
+          <div class="ship-ready-copy">
+            <span class="eyebrow">Packed & Ready</span>
+            <h3>Retail-Ready Inside, Export-Ready Outside</h3>
+            <p>We can deliver a complete packaging system for B2B clients—from branded product presentation to secure outer-carton packing for wholesale shipment.</p>
+            <ul class="feature-points">
+              <li><strong>Branded Product Presentation</strong> Insert cards, ribbon boxes, pouches and curated crystal arrangements that support premium positioning.</li>
+              <li><strong>Shockproof Inner Protection</strong> Tissue, foam and compartment inserts help reduce movement and keep fragile pieces protected.</li>
+              <li><strong>Wholesale Carton Support</strong> OEM & wholesale outer cartons are prepared for easier handling, shipping and bulk fulfillment.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- B2B Inquiry Form -->
-    <section id="oemInquiryForm" class="section" style="background: #faf6f0; padding: 80px 20px; text-align: center;">
-      <div style="max-width: 650px; margin: 0 auto;">
-        <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 15px; color: #222;">Request a Custom Sourcing Quote</h2>
-        <p style="color: #666; margin-bottom: 30px; line-height: 1.6;">Ready to start your custom crystal brand? Fill out the details below. Our B2B sales team will contact you with wholesale pricing within 12 hours.</p>
-        <form id="contactForm" style="display: flex; flex-direction: column; gap: 15px;">
-          <input required placeholder="Your Name / Company Name" style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;" />
-          <input type="email" required placeholder="Business Email Address" style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;" />
-          <input placeholder="WhatsApp Number" style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;" />
-          <textarea required placeholder="Please describe your customization or product sourcing requirements (Materials, Qty, Packaging styles, etc.)" style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; height: 150px; resize: vertical;"></textarea>
-          <button class="btn primary" type="submit" style="background: #bfa37a; border-color: #bfa37a; padding: 14px; font-size: 1.1rem; color: #fff; cursor: pointer; border-radius: 4px;">Submit Sourcing Inquiry</button>
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Fast Cooperation Flow</span><h2>5 Steps From Idea to Delivery</h2></div>
+          <p class="section-lead">A clear B2B workflow helps you compare cost, confirm samples and move into production with fewer delays.</p>
+        </div>
+        <div class="flow">
+          <article class="step"><h3>Inquiry</h3><p>Share crystal type, quantity, packaging and custom needs.</p></article>
+          <article class="step"><h3>Quotation</h3><p>Receive product, packaging, MOQ and shipping quote.</p></article>
+          <article class="step"><h3>Sample · 7 Days</h3><p>Confirm material, logo, packaging and final presentation.</p></article>
+          <article class="step"><h3>Production</h3><p>Batch processing with QC checkpoints and order updates.</p></article>
+          <article class="step"><h3>Delivery</h3><p>Export-grade packing and shipping support to your market.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section inquiry" id="inquiry">
+      <div class="container form-wrap">
+        <aside class="contact-card">
+          <span class="eyebrow">B2B Inquiry Funnel</span>
+          <h3>Tell us what you want to source or customize.</h3>
+          <p>Fill in the deep inquiry form and send it by WhatsApp in one click. You can also email the same details to the AURANOVAGEMS team.</p>
+          <div class="contact-list">
+            <a href="https://wa.me/8617629173592" target="_blank" rel="noopener">WhatsApp: +86 17629173592</a>
+            <a href="mailto:info@auranovagems.com">Email: info@auranovagems.com</a>
+            <div>Best for: OEM, wholesale, private label, custom sets</div>
+          </div>
+        </aside>
+        <form class="quote-form" id="b2bInquiryForm">
+          <div class="form-grid">
+            <div class="field"><label for="name">Name *</label><input id="name" name="name" autocomplete="name" required placeholder="Your name"></div>
+            <div class="field"><label for="company">Company / Store</label><input id="company" name="company" placeholder="Brand, shop or marketplace store"></div>
+            <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+            <div class="field"><label for="phone">WhatsApp / Phone</label><input id="phone" name="phone" placeholder="Country code + number"></div>
+            <div class="field"><label for="crystalType">Crystal Type *</label><select id="crystalType" name="crystalType" required><option value="">Select crystal type</option><option>Bracelets</option><option>Crystal Towers / Points</option><option>Crystal Spheres</option><option>Chakra Sets</option><option>Zodiac / Intention Sets</option><option>Carvings / Decor</option><option>Mixed Natural Materials</option><option>Not sure yet - need recommendation</option></select></div>
+            <div class="field"><label for="quantity">Quantity *</label><select id="quantity" name="quantity" required><option value="">Select quantity</option><option>50 - 100 pcs</option><option>100 - 300 pcs</option><option>300 - 500 pcs</option><option>500 - 1,000 pcs</option><option>1,000+ pcs</option><option>Need MOQ suggestion</option></select></div>
+            <div class="field"><label for="packaging">Packaging</label><select id="packaging" name="packaging"><option>Standard protective packing</option><option>Velvet pouch</option><option>Custom card + pouch</option><option>Luxury gift box</option><option>Retail display box</option><option>Need packaging recommendation</option></select></div>
+            <div class="field"><label for="timeline">Timeline</label><select id="timeline" name="timeline"><option>Flexible</option><option>Need sample within 7 days</option><option>Need shipment this month</option><option>Planning next season</option></select></div>
+            <div class="field full"><label for="customNeeds">Custom Needs</label><textarea id="customNeeds" name="customNeeds" placeholder="Logo, metal tag, electroplating color, gift box style, insert card, barcode, crystal materials, target price, etc."></textarea></div>
+            <div class="field full"><label for="market">Target Market / Sales Channel</label><input id="market" name="market" placeholder="Amazon, Shopify, TikTok Shop, retail stores, spiritual shop, gifting, etc."></div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit" data-whatsapp>Send via WhatsApp</button>
+            <button class="btn btn-dark" type="button" data-email>Email Inquiry</button>
+          </div>
+          <p class="fineprint">Required fields: name, email, crystal type and quantity. The WhatsApp button will auto-generate a structured B2B inquiry message.</p>
         </form>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div><strong>AURANOVAGEMS</strong><p>Your trusted partner for healing crystals, spiritual jewelry and custom crystal collections worldwide.</p></div>
-    <div><b>Quick Links</b><a href="../#catalog">Catalog</a><a href="../#oem">OEM Service</a><a href="../#learn">Crystal Guide</a></div>
-    <div><b>Contact Us</b><span>info@auranovagems.com</span><span>+86 17629173592</span><a href="../whatsapp.html" class="footer-wa-link">WhatsApp Chat</a></div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="../script.js"></script>
+  <footer class="footer"><div class="container"><div><strong>AURANOVAGEMS</strong><br>Healing crystals, spiritual jewelry and custom crystal collections worldwide.</div><div>OEM & Wholesale · Direct Sourcing · Export Packing</div></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/oem-wholesale.js"></script>
 </body>
 </html>
