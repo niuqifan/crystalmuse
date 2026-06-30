@@ -1154,62 +1154,45 @@ assets/css/background-config.css
 
 /* --- Factory display banner styles --- */
 .factory-banner {
-  width: 100% !important;
-  margin: 0 0 52px !important;
+  width: auto !important;
+  margin: 0 20px 52px !important;
   padding: 0 !important;
   overflow: hidden !important;
   position: relative !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  max-height: 400px !important;
+  border-radius: 24px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04) !important;
+  max-height: 448px !important;
 }
 .factory-banner img {
   width: 100% !important;
-  height: 400px !important;
+  height: 448px !important;
   object-fit: cover !important;
+  object-position: center top !important;
   display: block !important;
 }
 @media(max-width:1100px){
   .factory-banner{
-    max-height:340px !important;
+    margin: 0 16px 42px !important;
+    max-height:380px !important;
   }
   .factory-banner img{
-    height:340px !important;
+    height:380px !important;
   }
 }
 @media(max-width:720px){
   .factory-banner{
-    margin:0 0 36px !important;
-    max-height:260px !important;
-  }
-  .factory-banner img{
-    height:260px !important;
-  }
-}
-.factory-banner img {
-  width: 100% !important;
-  height: 340px !important;
-  object-fit: cover !important;
-  display: block !important;
-}
-@media(max-width:1100px){
-  .factory-banner{
-    margin:0 6px 36px !important;
+    margin:0 12px 36px !important;
     max-height:280px !important;
+    border-radius:18px !important;
   }
   .factory-banner img{
     height:280px !important;
   }
 }
-@media(max-width:720px){
-  .factory-banner{
-    margin:0 2px 30px !important;
-    max-height:220px !important;
-    border-radius:14px !important;
-  }
-  .factory-banner img{
-    height:220px !important;
-  }
+
+/* Specific product image scaling for better visibility */
+.product-bg-5, .product-bg-7 {
+  background-size: 76% auto !important;
 }
 .factory-banner-btn {
   position: absolute !important;
