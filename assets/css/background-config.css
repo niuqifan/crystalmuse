@@ -54,7 +54,7 @@ assets/css/background-config.css
   --product-09: url("../images/product-09.png");
   --product-10: url("../images/product-10.png");
   --product-position: center center;
-  --product-size: cover;
+  --product-size: 88% auto;
 
   /* OEM & Private Label top banner */
   --oem-banner-bg: url("../images/oem-banner.png");
@@ -1161,11 +1161,11 @@ assets/css/background-config.css
   position: relative !important;
   border-radius: 20px !important;
   box-shadow: 0 4px 20px rgba(0,0,0,0.05) !important;
-  max-height: 320px !important;
+  max-height: 280px !important;
 }
 .factory-banner img {
   width: 100% !important;
-  height: 320px !important;
+  height: 280px !important;
   object-fit: cover !important;
   display: block !important;
 }
