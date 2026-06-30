@@ -299,6 +299,8 @@ nav{gap:24px;font-size:13px;color:#2e2135}.inquiry-btn{padding:12px 16px;border-
   object-fit: contain;
   display: block;
   margin: 0 auto 18px;
+  border-radius: 50%;
+  background: transparent;
 }
 .wa-brand-name{
   margin: 0 0 22px;
