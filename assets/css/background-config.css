@@ -1155,7 +1155,7 @@ assets/css/background-config.css
 /* --- Factory display banner styles --- */
 .factory-banner {
   width: auto !important;
-  margin: 0 20px 48px !important;
+  margin: 0 10px 48px !important;
   padding: 0 !important;
   overflow: hidden !important;
   position: relative !important;
@@ -1171,7 +1171,7 @@ assets/css/background-config.css
 }
 @media(max-width:1100px){
   .factory-banner{
-    margin:0 16px 36px !important;
+    margin:0 6px 36px !important;
     max-height:280px !important;
   }
   .factory-banner img{
@@ -1180,7 +1180,7 @@ assets/css/background-config.css
 }
 @media(max-width:720px){
   .factory-banner{
-    margin:0 12px 30px !important;
+    margin:0 2px 30px !important;
     max-height:220px !important;
     border-radius:14px !important;
   }
