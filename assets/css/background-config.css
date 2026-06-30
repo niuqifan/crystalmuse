@@ -1161,11 +1161,11 @@ assets/css/background-config.css
   position: relative !important;
   border-radius: 24px !important;
   box-shadow: 0 10px 30px rgba(0,0,0,0.04) !important;
-  max-height: 463px !important;
+  max-height: 488px !important;
 }
 .factory-banner img {
   width: 100% !important;
-  height: 463px !important;
+  height: 488px !important;
   object-fit: cover !important;
   object-position: center top !important;
   display: block !important;
@@ -1173,20 +1173,20 @@ assets/css/background-config.css
 @media(max-width:1100px){
   .factory-banner{
     margin: 0 16px 42px !important;
-    max-height:400px !important;
+    max-height:425px !important;
   }
   .factory-banner img{
-    height:400px !important;
+    height:425px !important;
   }
 }
 @media(max-width:720px){
   .factory-banner{
     margin:0 12px 36px !important;
-    max-height:300px !important;
+    max-height:325px !important;
     border-radius:18px !important;
   }
   .factory-banner img{
-    height:300px !important;
+    height:325px !important;
   }
 }
 
