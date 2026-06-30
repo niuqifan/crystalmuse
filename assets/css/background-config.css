@@ -1100,6 +1100,15 @@ assets/css/background-config.css
 */
 .article-grid article{
   overflow:hidden !important;
+  background:#fff !important;
+  border-radius:18px !important;
+  padding:16px !important;
+  box-shadow:0 2px 10px rgba(0,0,0,0.03) !important;
+  transition:transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.3s ease !important;
+}
+.article-grid a:hover article{
+  transform:translateY(-8px) !important;
+  box-shadow:0 12px 32px rgba(201,147,76,0.12) !important;
 }
 .article-grid .article-img{
   height:auto !important;
@@ -1108,7 +1117,24 @@ assets/css/background-config.css
   background-size:cover !important;
   background-position:center center !important;
   background-color:#f7f1ea !important;
-  border-radius:14px !important;
+  border-radius:12px !important;
+}
+.learn-btn{
+  display:inline-block !important;
+  margin-top:14px !important;
+  padding:8px 18px !important;
+  background:#fcf7f3 !important;
+  border:1.5px solid #e5d8cc !important;
+  border-radius:8px !important;
+  color:#8c735a !important;
+  font-size:13px !important;
+  font-weight:600 !important;
+  transition:all 0.2s ease !important;
+}
+.article-grid a:hover .learn-btn{
+  background:#c9934c !important;
+  color:#fff !important;
+  border-color:#c9934c !important;
 }
 .article-grid .article-img.learn-bg-1{background-image:var(--learn-01) !important;}
 .article-grid .article-img.learn-bg-2{background-image:var(--learn-02) !important;}
@@ -1128,16 +1154,39 @@ assets/css/background-config.css
 
 /* --- Factory display banner styles --- */
 .factory-banner {
-  width: 100% !important;
-  margin: 0 !important;
+  width: auto !important;
+  margin: 0 20px 48px !important;
   padding: 0 !important;
   overflow: hidden !important;
   position: relative !important;
+  border-radius: 20px !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05) !important;
+  max-height: 320px !important;
 }
 .factory-banner img {
   width: 100% !important;
-  height: auto !important;
+  height: 320px !important;
+  object-fit: cover !important;
   display: block !important;
+}
+@media(max-width:1100px){
+  .factory-banner{
+    margin:0 16px 36px !important;
+    max-height:280px !important;
+  }
+  .factory-banner img{
+    height:280px !important;
+  }
+}
+@media(max-width:720px){
+  .factory-banner{
+    margin:0 12px 30px !important;
+    max-height:220px !important;
+    border-radius:14px !important;
+  }
+  .factory-banner img{
+    height:220px !important;
+  }
 }
 .factory-banner-btn {
   position: absolute !important;
