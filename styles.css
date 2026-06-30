@@ -228,21 +228,20 @@ nav{gap:24px;font-size:13px;color:#2e2135}.inquiry-btn{padding:12px 16px;border-
 }
 
 
-/* --- WhatsApp floating contact button - HIDDEN but with restored rounded corner styles --- */
+/* --- WhatsApp floating contact button --- */
 .whatsapp-float{
-  display:none !important;
+  display:flex;
   position:fixed;
   right:26px;
-  bottom:96px;
+  bottom:32px;
   width:58px;
   height:58px;
   border-radius:50%;
   background:#25D366;
-  display:flex;
   align-items:center;
   justify-content:center;
-  z-index:60;
-  box-shadow:0 14px 32px rgba(37,211,102,.35);
+  z-index:99;
+  box-shadow:0 12px 30px rgba(37,211,102,.35);
   border:2px solid rgba(255,255,255,.95);
   transition:transform .22s ease, box-shadow .22s ease;
 }
