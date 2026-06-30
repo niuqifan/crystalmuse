@@ -63,10 +63,10 @@ assets/css/background-config.css
   --oem-banner-size: cover;
 
   /* Learning Hub article backgrounds */
-  --learn-01: url("../images/learn-01.png");
-  --learn-02: url("../images/learn-02.png");
-  --learn-03: url("../images/learn-03.png");
-  --learn-04: url("../images/learn-04.png");
+  --learn-01: url("../images/learn-01.webp");
+  --learn-02: url("../images/learn-02.jpg");
+  --learn-03: url("../images/learn-03.webp");
+  --learn-04: url("../images/learn-04.jpg");
   --learn-position: center center;
   --learn-size: cover;
 }

@@ -1,0 +1,404 @@
+{% comment %}
+Aura Nova Gems — Chakra Guide SEO Page Section
+Upload all files from assets/images/ to Shopify theme assets. Includes OG/social image and category thumbnail.
+Then create a new section with this file content and add it to a page template.
+{% endcomment %}
+
+<style>
+:root{
+  --ang-bg:#fbf7f1;
+  --ang-card:#fffdf9;
+  --ang-ink:#12001f;
+  --ang-muted:#5d5270;
+  --ang-gold:#9a641f;
+  --ang-line:#eadfce;
+  --ang-shadow:0 22px 55px rgba(70,42,20,.12);
+  --ang-radius:26px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ang-bg);color:var(--ang-ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+img{max-width:100%;display:block}
+a{color:inherit}
+.ang-chakra-page{max-width:1480px;margin:0 auto;padding:32px 24px 72px}
+.ang-eyebrow{margin:0 0 10px;color:var(--ang-gold);font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.ang-hero{display:grid;grid-template-columns:1fr 1.05fr;gap:34px;align-items:center;padding:42px;border:1px solid var(--ang-line);border-radius:34px;background:linear-gradient(135deg,#fffaf4 0%,#fffdf9 42%,#f7edf5 100%);box-shadow:var(--ang-shadow)}
+.ang-hero h1,.ang-section-head h2,.ang-intro h2,.ang-filter-panel h2,.ang-how h2,.ang-shop h2,.ang-oem h2,.ang-faq h2{font-family:Georgia,"Times New Roman",serif;line-height:1.04;letter-spacing:-.035em;color:var(--ang-ink)}
+.ang-hero h1{font-size:clamp(42px,5vw,76px);margin:0 0 18px;max-width:850px}
+.ang-hero-copy{font-size:19px;color:var(--ang-muted);max-width:680px;margin:0 0 26px}
+.ang-hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+.ang-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 21px;border-radius:999px;font-weight:800;text-decoration:none;transition:.2s ease}
+.ang-btn-primary{background:var(--ang-ink);color:#fff;border:1px solid var(--ang-ink)}
+.ang-btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(18,0,31,.18)}
+.ang-btn-secondary{background:#fff6e8;color:var(--ang-ink);border:1px solid #edcf9e}
+.ang-hero-image img,.ang-intro img{border-radius:28px;box-shadow:0 16px 36px rgba(57,32,88,.16);height:100%;object-fit:cover}
+.ang-intro{display:grid;grid-template-columns:.85fr 1.15fr;gap:30px;margin-top:34px;padding:34px;border-radius:30px;background:#fffdf9;border:1px solid var(--ang-line);box-shadow:0 16px 38px rgba(70,42,20,.08)}
+.ang-intro h2,.ang-filter-panel h2,.ang-section-head h2,.ang-how h2,.ang-shop h2,.ang-oem h2,.ang-faq h2{font-size:clamp(32px,3.5vw,54px);margin:0 0 14px}
+.ang-intro p,.ang-section-head p,.ang-shop p,.ang-oem p{font-size:17px;color:var(--ang-muted);margin:0 0 16px}
+.ang-note{padding:16px 18px;border-radius:18px;background:#fff6e8;border:1px solid #edcf9e;color:#4d3a25!important;font-weight:650}
+.ang-filter-panel{position:sticky;top:0;z-index:5;margin-top:34px;padding:22px;border-radius:26px;background:rgba(255,253,249,.92);border:1px solid var(--ang-line);box-shadow:0 15px 30px rgba(70,42,20,.08);backdrop-filter:blur(14px)}
+.ang-search-wrap input{width:100%;height:52px;margin:12px 0 14px;border-radius:999px;border:1px solid var(--ang-line);background:#fff;padding:0 20px;color:var(--ang-ink);font-size:16px;outline:none}
+.ang-search-wrap input:focus{border-color:#d3ad73;box-shadow:0 0 0 4px rgba(211,173,115,.18)}
+.ang-filter-buttons{display:flex;flex-wrap:wrap;gap:10px}
+.ang-filter-buttons button{border:1px solid #e8cfaa;background:#fff8ed;color:#744a15;border-radius:999px;padding:10px 15px;font-weight:800;cursor:pointer}
+.ang-filter-buttons button.is-active{background:var(--ang-ink);border-color:var(--ang-ink);color:#fff}
+.ang-section,.ang-how,.ang-faq{margin-top:54px}
+.ang-section-head{text-align:center;max-width:780px;margin:0 auto 26px}
+.ang-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.ang-chakra-card{overflow:hidden;border-radius:var(--ang-radius);background:var(--ang-card);border:1px solid var(--ang-line);box-shadow:0 18px 42px rgba(70,42,20,.09);transition:.2s ease}
+.ang-chakra-card:hover{transform:translateY(-4px);box-shadow:0 26px 60px rgba(70,42,20,.14)}
+.ang-card-image{position:relative;height:210px;overflow:hidden}
+.ang-card-image img{width:100%;height:100%;object-fit:cover}
+.ang-color-dot{position:absolute;right:22px;bottom:-18px;width:48px;height:48px;border-radius:50%;border:5px solid #fffdf9;box-shadow:0 8px 18px rgba(0,0,0,.12)}
+.ang-root{background:#a62320}.ang-sacral{background:#e46627}.ang-solar{background:#e6ae2d}.ang-heart{background:#4c956f}.ang-throat{background:#3c81b5}.ang-third-eye{background:#49419b}.ang-crown{background:#e6e1ee}
+.ang-card-body{padding:28px 26px 24px}
+.ang-card-kicker{font-size:13px;color:var(--ang-gold);font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.ang-card-body h3{font-family:Georgia,"Times New Roman",serif;font-size:34px;line-height:1.05;letter-spacing:-.035em;margin:0 0 10px}
+.ang-card-body p{font-size:16.5px;color:var(--ang-ink);margin:0 0 12px}
+.ang-card-body dl{margin:16px 0 20px;border-top:1px solid var(--ang-line);padding-top:14px}
+.ang-card-body dl div{display:grid;grid-template-columns:92px 1fr;gap:12px;margin:8px 0}
+.ang-card-body dt{font-weight:850;color:var(--ang-gold)}
+.ang-card-body dd{margin:0;color:var(--ang-muted)}
+.ang-card-footer{display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid var(--ang-line);padding-top:16px}
+.ang-card-footer span{display:inline-flex;border:1px solid #e8cfaa;background:#fff8ed;color:#744a15;border-radius:999px;padding:7px 12px;font-size:13px;font-weight:850}
+.ang-card-footer a{font-weight:900;text-decoration:none;color:var(--ang-ink)}
+.ang-mini-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.ang-mini-grid article{border-radius:22px;background:#fffdf9;border:1px solid var(--ang-line);padding:22px;box-shadow:0 12px 30px rgba(70,42,20,.07)}
+.ang-mini-grid h3{font-family:Georgia,"Times New Roman",serif;font-size:24px;margin:0 0 8px}
+.ang-mini-grid p{margin:0;color:var(--ang-muted)}
+.ang-shop,.ang-oem{display:grid;grid-template-columns:.8fr 1.2fr;gap:26px;align-items:center;margin-top:54px;padding:34px;border-radius:30px;background:linear-gradient(135deg,#fffdf9,#fff6e8);border:1px solid var(--ang-line);box-shadow:0 16px 38px rgba(70,42,20,.08)}
+.ang-shop-links{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.ang-shop-links a{padding:16px 18px;border-radius:18px;background:#fff;border:1px solid var(--ang-line);font-weight:850;text-decoration:none;color:var(--ang-ink)}
+.ang-oem{grid-template-columns:1fr .9fr auto}
+.ang-oem ul{margin:0;padding-left:20px;color:var(--ang-muted);font-weight:650}
+.ang-faq{max-width:980px;margin-left:auto;margin-right:auto}
+.ang-faq details{border-radius:18px;background:#fffdf9;border:1px solid var(--ang-line);padding:18px 20px;margin:12px 0}
+.ang-faq summary{cursor:pointer;font-weight:900;color:var(--ang-ink)}
+.ang-faq p{color:var(--ang-muted);margin:12px 0 0}
+.ang-hidden{display:none!important}
+@media(max-width:1020px){
+  .ang-hero,.ang-intro,.ang-shop,.ang-oem{grid-template-columns:1fr}
+  .ang-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ang-mini-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:680px){
+  .ang-chakra-page{padding:18px 14px 48px}
+  .ang-hero,.ang-intro,.ang-shop,.ang-oem{padding:22px;border-radius:24px}
+  .ang-card-grid,.ang-mini-grid,.ang-shop-links{grid-template-columns:1fr}
+  .ang-card-image{height:180px}
+  .ang-card-body dl div{grid-template-columns:1fr;gap:2px}
+  .ang-card-footer{align-items:flex-start;flex-direction:column}
+}
+
+</style>
+
+<section class="ang-chakra-page">
+    <section class="ang-hero">
+      <div class="ang-hero-content">
+        <p class="ang-eyebrow">Chakra Crystal Guide</p>
+        <h1>Chakra Guide: Balance Your Energy With Healing Crystals</h1>
+        <p class="ang-hero-copy">Discover the meaning of the 7 chakras and find the crystals that support grounding, creativity, confidence, love, communication, intuition, and spiritual clarity.</p>
+        <div class="ang-hero-actions">
+          <a class="ang-btn ang-btn-primary" href="#shop-by-chakra">Shop Chakra Crystals</a>
+          <a class="ang-btn ang-btn-secondary" href="#seven-chakras">Explore the 7 Chakras</a>
+        </div>
+      </div>
+      <div class="ang-hero-image">
+        <img src="{{ 'chakra-guide-hero.webp' | asset_url }}" alt="Seven chakra crystals arranged on a soft lavender silk background">
+      </div>
+    </section>
+
+    <section class="ang-intro">
+      <div>
+        <p class="ang-eyebrow">Energy Alignment</p>
+        <h2>What Are Chakras?</h2>
+        <p>Chakras are energy centers often used in spiritual and crystal healing practices. Each chakra is connected with a different area of life, from grounding and confidence to love, communication, intuition, and higher awareness.</p>
+        <p class="ang-note">Crystals are commonly chosen by color, intention, chakra connection, and personal energy needs.</p>
+      </div>
+      <img src="{{ 'chakra-overview-crystals.webp' | asset_url }}" alt="Assorted healing crystals in Aura Nova Gems style">
+    </section>
+
+    <section class="ang-filter-panel" aria-label="Chakra filters">
+      <div>
+        <p class="ang-eyebrow">Find your chakra</p>
+        <h2>Explore by Chakra or Intention</h2>
+      </div>
+      <div class="ang-search-wrap">
+        <input id="angChakraSearch" type="search" placeholder="Search Root, love, Citrine, communication..." aria-label="Search chakra guide">
+      </div>
+      <div class="ang-filter-buttons">
+        <button class="is-active" data-filter="all">All</button>
+        <button data-filter="root">Root</button>
+        <button data-filter="sacral">Sacral</button>
+        <button data-filter="solar">Solar Plexus</button>
+        <button data-filter="heart">Heart</button>
+        <button data-filter="throat">Throat</button>
+        <button data-filter="third-eye">Third Eye</button>
+        <button data-filter="crown">Crown</button>
+      </div>
+    </section>
+
+    <section id="seven-chakras" class="ang-section">
+      <div class="ang-section-head">
+        <p class="ang-eyebrow">The 7 Chakras</p>
+        <h2>The 7 Chakras & Best Crystals</h2>
+        <p>Use this guide to match each chakra with its color, energy focus, and recommended healing crystals.</p>
+      </div>
+      <div class="ang-card-grid" id="angChakraGrid">
+
+            <article class="ang-chakra-card" data-chakra="root" data-search="Root Chakra Muladhara Red / Black Grounding, courage, protection Red Jasper, Black Tourmaline, Hematite, Smoky Quartz">
+              <div class="ang-card-image">
+                <img src="{{ 'card-root-chakra.webp' | asset_url }}" alt="Root Chakra crystals on soft lavender silk">
+                <span class="ang-color-dot ang-root"></span>
+              </div>
+              <div class="ang-card-body">
+                <div class="ang-card-kicker">Muladhara · Red / Black</div>
+                <h3>Root Chakra</h3>
+                <p>Grounding, safety, stability, and protection.</p>
+                <dl>
+                  <div><dt>Best for</dt><dd>Grounding, courage, protection</dd></div>
+                  <div><dt>Crystals</dt><dd>Red Jasper, Black Tourmaline, Hematite, Smoky Quartz</dd></div>
+                  <div><dt>Color</dt><dd>Red / Black</dd></div>
+                </dl>
+                <div class="ang-card-footer">
+                  <span>Grounding</span>
+                  <a href="/collections/root-chakra">Shop Root Chakra</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="ang-chakra-card" data-chakra="sacral" data-search="Sacral Chakra Svadhisthana Orange Creativity, passion, emotional balance Carnelian, Sunstone, Orange Calcite, Moonstone">
+              <div class="ang-card-image">
+                <img src="{{ 'card-sacral-chakra.webp' | asset_url }}" alt="Sacral Chakra crystals on soft lavender silk">
+                <span class="ang-color-dot ang-sacral"></span>
+              </div>
+              <div class="ang-card-body">
+                <div class="ang-card-kicker">Svadhisthana · Orange</div>
+                <h3>Sacral Chakra</h3>
+                <p>Creativity, passion, emotional flow, and joyful expression.</p>
+                <dl>
+                  <div><dt>Best for</dt><dd>Creativity, passion, emotional balance</dd></div>
+                  <div><dt>Crystals</dt><dd>Carnelian, Sunstone, Orange Calcite, Moonstone</dd></div>
+                  <div><dt>Color</dt><dd>Orange</dd></div>
+                </dl>
+                <div class="ang-card-footer">
+                  <span>Creativity</span>
+                  <a href="/collections/sacral-chakra">Shop Sacral Chakra</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="ang-chakra-card" data-chakra="solar" data-search="Solar Plexus Chakra Manipura Yellow / Gold Confidence, abundance, motivation Citrine, Pyrite, Tiger’s Eye, Yellow Jasper">
+              <div class="ang-card-image">
+                <img src="{{ 'card-solar-plexus-chakra.webp' | asset_url }}" alt="Solar Plexus Chakra crystals on soft lavender silk">
+                <span class="ang-color-dot ang-solar"></span>
+              </div>
+              <div class="ang-card-body">
+                <div class="ang-card-kicker">Manipura · Yellow / Gold</div>
+                <h3>Solar Plexus Chakra</h3>
+                <p>Confidence, motivation, abundance, and personal power.</p>
+                <dl>
+                  <div><dt>Best for</dt><dd>Confidence, abundance, motivation</dd></div>
+                  <div><dt>Crystals</dt><dd>Citrine, Pyrite, Tiger’s Eye, Yellow Jasper</dd></div>
+                  <div><dt>Color</dt><dd>Yellow / Gold</dd></div>
+                </dl>
+                <div class="ang-card-footer">
+                  <span>Confidence</span>
+                  <a href="/collections/solar-plexus-chakra">Shop Solar Plexus Chakra</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="ang-chakra-card" data-chakra="heart" data-search="Heart Chakra Anahata Green / Pink Love, self-care, compassion Rose Quartz, Green Aventurine, Rhodonite, Jade">
+              <div class="ang-card-image">
+                <img src="{{ 'card-heart-chakra.webp' | asset_url }}" alt="Heart Chakra crystals on soft lavender silk">
+                <span class="ang-color-dot ang-heart"></span>
+              </div>
+              <div class="ang-card-body">
+                <div class="ang-card-kicker">Anahata · Green / Pink</div>
+                <h3>Heart Chakra</h3>
+                <p>Love, compassion, forgiveness, and emotional healing.</p>
+                <dl>
+                  <div><dt>Best for</dt><dd>Love, self-care, compassion</dd></div>
+                  <div><dt>Crystals</dt><dd>Rose Quartz, Green Aventurine, Rhodonite, Jade</dd></div>
+                  <div><dt>Color</dt><dd>Green / Pink</dd></div>
+                </dl>
+                <div class="ang-card-footer">
+                  <span>Love</span>
+                  <a href="/collections/heart-chakra">Shop Heart Chakra</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="ang-chakra-card" data-chakra="throat" data-search="Throat Chakra Vishuddha Blue Communication, truth, calm Aquamarine, Sodalite, Turquoise, Blue Lace Agate">
+              <div class="ang-card-image">
+                <img src="{{ 'card-throat-chakra.webp' | asset_url }}" alt="Throat Chakra crystals on soft lavender silk">
+                <span class="ang-color-dot ang-throat"></span>
+              </div>
+              <div class="ang-card-body">
+                <div class="ang-card-kicker">Vishuddha · Blue</div>
+                <h3>Throat Chakra</h3>
+                <p>Communication, truth, calm expression, and clarity in words.</p>
+                <dl>
+                  <div><dt>Best for</dt><dd>Communication, truth, calm</dd></div>
+                  <div><dt>Crystals</dt><dd>Aquamarine, Sodalite, Turquoise, Blue Lace Agate</dd></div>
+                  <div><dt>Color</dt><dd>Blue</dd></div>
+                </dl>
+                <div class="ang-card-footer">
+                  <span>Communication</span>
+                  <a href="/collections/throat-chakra">Shop Throat Chakra</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="ang-chakra-card" data-chakra="third-eye" data-search="Third Eye Chakra Ajna Indigo / Purple Intuition, focus, insight Amethyst, Lapis Lazuli, Labradorite, Fluorite">
+              <div class="ang-card-image">
+                <img src="{{ 'card-third-eye-chakra.webp' | asset_url }}" alt="Third Eye Chakra crystals on soft lavender silk">
+                <span class="ang-color-dot ang-third-eye"></span>
+              </div>
+              <div class="ang-card-body">
+                <div class="ang-card-kicker">Ajna · Indigo / Purple</div>
+                <h3>Third Eye Chakra</h3>
+                <p>Intuition, insight, inner wisdom, and spiritual vision.</p>
+                <dl>
+                  <div><dt>Best for</dt><dd>Intuition, focus, insight</dd></div>
+                  <div><dt>Crystals</dt><dd>Amethyst, Lapis Lazuli, Labradorite, Fluorite</dd></div>
+                  <div><dt>Color</dt><dd>Indigo / Purple</dd></div>
+                </dl>
+                <div class="ang-card-footer">
+                  <span>Intuition</span>
+                  <a href="/collections/third-eye-chakra">Shop Third Eye Chakra</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="ang-chakra-card" data-chakra="crown" data-search="Crown Chakra Sahasrara White / Violet Clarity, cleansing, spiritual growth Clear Quartz, Selenite, Amethyst, Moonstone">
+              <div class="ang-card-image">
+                <img src="{{ 'card-crown-chakra.webp' | asset_url }}" alt="Crown Chakra crystals on soft lavender silk">
+                <span class="ang-color-dot ang-crown"></span>
+              </div>
+              <div class="ang-card-body">
+                <div class="ang-card-kicker">Sahasrara · White / Violet</div>
+                <h3>Crown Chakra</h3>
+                <p>Spiritual clarity, cleansing, meditation, and higher awareness.</p>
+                <dl>
+                  <div><dt>Best for</dt><dd>Clarity, cleansing, spiritual growth</dd></div>
+                  <div><dt>Crystals</dt><dd>Clear Quartz, Selenite, Amethyst, Moonstone</dd></div>
+                  <div><dt>Color</dt><dd>White / Violet</dd></div>
+                </dl>
+                <div class="ang-card-footer">
+                  <span>Clarity</span>
+                  <a href="/collections/crown-chakra">Shop Crown Chakra</a>
+                </div>
+              </div>
+            </article>
+      </div>
+    </section>
+
+    <section class="ang-how">
+      <div class="ang-section-head">
+        <p class="ang-eyebrow">Beginner Friendly</p>
+        <h2>How to Choose the Right Chakra Crystal</h2>
+      </div>
+      <div class="ang-mini-grid">
+        <article><h3>Choose by Energy Need</h3><p>Need grounding? Start with Root Chakra crystals. Want more confidence? Explore Solar Plexus stones.</p></article>
+        <article><h3>Choose by Color</h3><p>Many chakra crystals are selected by color, such as red for Root, green or pink for Heart, and white or violet for Crown.</p></article>
+        <article><h3>Choose by Intention</h3><p>Select stones based on love, protection, abundance, clarity, calm, communication, or spiritual connection.</p></article>
+        <article><h3>Choose by Product Type</h3><p>Bracelets are easy to wear daily, towers are ideal for room energy, and crystal sets are perfect for beginners.</p></article>
+      </div>
+    </section>
+
+    <section id="shop-by-chakra" class="ang-shop">
+      <div>
+        <p class="ang-eyebrow">Shop by Chakra</p>
+        <h2>Build Your Chakra Crystal Collection</h2>
+        <p>Explore chakra bracelets, crystal towers, tumbled stones, and 7 chakra gift sets designed for daily intention and energy balance.</p>
+      </div>
+      <div class="ang-shop-links">
+        <a href="/collections/root-chakra">Root Chakra Crystals</a>
+        <a href="/collections/sacral-chakra">Sacral Chakra Crystals</a>
+        <a href="/collections/solar-plexus-chakra">Solar Plexus Crystals</a>
+        <a href="/collections/heart-chakra">Heart Chakra Crystals</a>
+        <a href="/collections/throat-chakra">Throat Chakra Crystals</a>
+        <a href="/collections/third-eye-chakra">Third Eye Crystals</a>
+        <a href="/collections/crown-chakra">Crown Chakra Crystals</a>
+        <a href="/collections/7-chakra-crystals">7 Chakra Crystal Sets</a>
+      </div>
+    </section>
+
+    <section class="ang-oem">
+      <div>
+        <p class="ang-eyebrow">Wholesale & Private Label</p>
+        <h2>Create Custom Chakra Crystal Products for Your Brand</h2>
+        <p>Build your own chakra crystal collection with bracelets, towers, tumbled stones, gift sets, packaging cards, and private label options.</p>
+      </div>
+      <ul>
+        <li>7 Chakra Bracelet Sets</li>
+        <li>Custom Chakra Packaging Cards</li>
+        <li>Low MOQ Trial Orders</li>
+        <li>Wholesale Crystal Products</li>
+        <li>OEM & Private Label Support</li>
+      </ul>
+      <a class="ang-btn ang-btn-primary" href="/pages/contact">Start OEM Inquiry</a>
+    </section>
+
+    <section class="ang-faq">
+      <div class="ang-section-head">
+        <p class="ang-eyebrow">FAQ</p>
+        <h2>Chakra Crystal Questions</h2>
+      </div>
+      <details open><summary>What crystals are good for all chakras?</summary><p>Clear Quartz, Amethyst, Selenite, and 7 Chakra crystal sets are commonly used for overall energy alignment.</p></details>
+      <details><summary>How do I know which chakra crystal I need?</summary><p>Choose based on your intention. For grounding, start with Root Chakra stones. For love, choose Heart Chakra crystals. For clarity, explore Crown or Third Eye stones.</p></details>
+      <details><summary>Can I wear chakra crystals every day?</summary><p>Many people wear chakra bracelets or crystal jewelry daily as a reminder of their intention and energy focus.</p></details>
+      <details><summary>What is a 7 Chakra crystal set?</summary><p>A 7 Chakra crystal set usually includes one or more stones connected with each chakra, often arranged by color from red to violet.</p></details>
+    </section>
+  </section>
+
+
+<script>
+(() => {
+  const cards = Array.from(document.querySelectorAll('.ang-chakra-card'));
+  const buttons = Array.from(document.querySelectorAll('.ang-filter-buttons button'));
+  const search = document.querySelector('#angChakraSearch');
+  let activeFilter = 'all';
+
+  function applyFilters() {
+    const query = (search?.value || '').trim().toLowerCase();
+    cards.forEach(card => {
+      const matchesFilter = activeFilter === 'all' || card.dataset.chakra === activeFilter;
+      const matchesSearch = !query || (card.dataset.search || '').toLowerCase().includes(query);
+      card.classList.toggle('ang-hidden', !(matchesFilter && matchesSearch));
+    });
+  }
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      buttons.forEach(btn => btn.classList.remove('is-active'));
+      button.classList.add('is-active');
+      activeFilter = button.dataset.filter || 'all';
+      applyFilters();
+    });
+  });
+
+  search?.addEventListener('input', applyFilters);
+})();
+
+</script>
+
+{% schema %}
+{
+  "name": "Chakra Guide SEO Page",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Chakra Guide: Balance Your Energy With Healing Crystals"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Chakra Guide SEO Page"
+    }
+  ]
+}
+{% endschema %}

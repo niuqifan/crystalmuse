@@ -1,0 +1,98 @@
+:root{
+  --ang-bg:#fbf7f1;
+  --ang-card:#fffdf9;
+  --ang-ink:#12001f;
+  --ang-muted:#5d5270;
+  --ang-gold:#9a641f;
+  --ang-line:#eadfce;
+  --ang-shadow:0 22px 55px rgba(70,42,20,.12);
+  --ang-radius:26px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ang-bg);color:var(--ang-ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+img{max-width:100%;display:block}
+a{color:inherit}
+.ang-zodiac-page{max-width:1480px;margin:0 auto;padding:20px 24px 72px}
+.ang-eyebrow{margin:0 0 10px;color:var(--ang-gold);font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.ang-hero{display:grid;grid-template-columns:1fr 1.05fr;gap:34px;align-items:center;padding:42px;border:1px solid var(--ang-line);border-radius:34px;background:linear-gradient(135deg,#fffaf4 0%,#fffdf9 44%,#f4edf7 100%);box-shadow:var(--ang-shadow)}
+.ang-hero h1,.ang-section-head h2,.ang-intro h2,.ang-filter-panel h2,.ang-how h2,.ang-elements h2,.ang-oem h2,.ang-faq h2{font-family:Georgia,"Times New Roman",serif;line-height:1.04;letter-spacing:-.035em;color:var(--ang-ink)}
+.ang-hero h1{font-size:clamp(42px,5vw,76px);margin:0 0 18px;max-width:850px}
+.ang-hero-copy{font-size:19px;color:var(--ang-muted);max-width:680px;margin:0 0 26px}
+.ang-hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+.ang-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 21px;border-radius:999px;font-weight:800;text-decoration:none;transition:.2s ease}
+.ang-btn-primary{background:var(--ang-ink);color:#fff;border:1px solid var(--ang-ink)}
+.ang-btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(18,0,31,.18)}
+.ang-btn-secondary{background:#fff6e8;color:var(--ang-ink);border:1px solid #edcf9e}
+.ang-hero-image img,.ang-intro img{border-radius:28px;box-shadow:0 16px 36px rgba(57,32,88,.16);height:100%;object-fit:cover}
+.ang-intro{display:grid;grid-template-columns:.85fr 1.15fr;gap:30px;margin-top:26px;padding:34px;border-radius:30px;background:#fffdf9;border:1px solid var(--ang-line);box-shadow:0 16px 38px rgba(70,42,20,.08)}
+.ang-intro h2,.ang-filter-panel h2,.ang-section-head h2,.ang-how h2,.ang-elements h2,.ang-oem h2,.ang-faq h2{font-size:clamp(32px,3.5vw,54px);margin:0 0 14px}
+.ang-intro p,.ang-section-head p,.ang-oem p{font-size:17px;color:var(--ang-muted);margin:0 0 16px}
+.ang-note{padding:16px 18px;border-radius:18px;background:#fff6e8;border:1px solid #edcf9e;color:#4d3a25!important;font-weight:650}
+.ang-filter-panel{position:sticky;top:0;z-index:5;margin-top:34px;padding:22px;border-radius:26px;background:rgba(255,253,249,.92);border:1px solid var(--ang-line);box-shadow:0 15px 30px rgba(70,42,20,.08);backdrop-filter:blur(14px)}
+.ang-search-wrap input{width:100%;height:52px;margin:12px 0 14px;border-radius:999px;border:1px solid var(--ang-line);background:#fff;padding:0 20px;color:var(--ang-ink);font-size:16px;outline:none}
+.ang-search-wrap input:focus{border-color:#d3ad73;box-shadow:0 0 0 4px rgba(211,173,115,.18)}
+.ang-filter-buttons{display:flex;flex-wrap:wrap;gap:10px}
+.ang-filter-buttons button{border:1px solid #e8cfaa;background:#fff8ed;color:#744a15;border-radius:999px;padding:10px 15px;font-weight:800;cursor:pointer}
+.ang-filter-buttons button.is-active{background:var(--ang-ink);border-color:var(--ang-ink);color:#fff}
+.ang-section,.ang-how,.ang-elements,.ang-faq{margin-top:54px}
+.ang-section-head{text-align:center;max-width:820px;margin:0 auto 26px}
+.ang-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.ang-zodiac-card{overflow:hidden;border-radius:var(--ang-radius);background:var(--ang-card);border:1px solid var(--ang-line);box-shadow:0 18px 42px rgba(70,42,20,.09);transition:.2s ease}
+.ang-zodiac-card:hover{transform:translateY(-4px);box-shadow:0 26px 60px rgba(70,42,20,.14)}
+.ang-card-image{position:relative;height:210px;overflow:hidden}
+.ang-card-image img{width:100%;height:100%;object-fit:cover}
+.ang-symbol{position:absolute;right:22px;bottom:-20px;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#f7efe4;border:5px solid #fffdf9;color:var(--ang-gold);font-weight:900;box-shadow:0 8px 18px rgba(0,0,0,.12)}
+.ang-card-body{padding:28px 26px 24px}
+.ang-card-kicker{font-size:13px;color:var(--ang-gold);font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.ang-card-body h3{font-family:Georgia,"Times New Roman",serif;font-size:34px;line-height:1.05;letter-spacing:-.035em;margin:0 0 10px}
+.ang-card-body p{font-size:16.5px;color:var(--ang-ink);margin:0 0 12px}
+.ang-card-body dl{margin:16px 0 20px;border-top:1px solid var(--ang-line);padding-top:14px}
+.ang-card-body dl div{display:grid;grid-template-columns:92px 1fr;gap:12px;margin:8px 0}
+.ang-card-body dt{font-weight:850;color:var(--ang-gold)}
+.ang-card-body dd{margin:0;color:var(--ang-muted)}
+.ang-card-footer{display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid var(--ang-line);padding-top:16px}
+.ang-card-footer span{display:inline-flex;border:1px solid #e8cfaa;background:#fff8ed;color:#744a15;border-radius:999px;padding:7px 12px;font-size:13px;font-weight:850}
+.ang-card-footer a{font-weight:900;text-decoration:none;color:var(--ang-ink)}
+.ang-element-grid,.ang-mini-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.ang-element-grid article,.ang-mini-grid article{border-radius:22px;background:#fffdf9;border:1px solid var(--ang-line);padding:22px;box-shadow:0 12px 30px rgba(70,42,20,.07)}
+.ang-element-grid h3,.ang-mini-grid h3{font-family:Georgia,"Times New Roman",serif;font-size:24px;margin:0 0 8px}
+.ang-element-grid p,.ang-mini-grid p{margin:0 0 8px;color:var(--ang-muted)}
+.ang-element-grid strong{display:block;color:var(--ang-ink);margin-bottom:14px}
+.ang-element-grid a{font-weight:900;text-decoration:none;color:var(--ang-gold)}
+.ang-oem{display:grid;grid-template-columns:1fr .9fr auto;gap:26px;align-items:center;margin-top:54px;padding:34px;border-radius:30px;background:linear-gradient(135deg,#fffdf9,#fff6e8);border:1px solid var(--ang-line);box-shadow:0 16px 38px rgba(70,42,20,.08)}
+.ang-oem ul{margin:0;padding-left:20px;color:var(--ang-muted);font-weight:650}
+.ang-faq{max-width:980px;margin-left:auto;margin-right:auto}
+.ang-faq details{border-radius:18px;background:#fffdf9;border:1px solid var(--ang-line);padding:18px 20px;margin:12px 0}
+.ang-faq summary{cursor:pointer;font-weight:900;color:var(--ang-ink)}
+.ang-faq p{color:var(--ang-muted);margin:12px 0 0}
+.ang-hidden{display:none!important}
+@media(max-width:1120px){
+  .ang-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ang-element-grid,.ang-mini-grid{grid-template-columns:repeat(2,1fr)}
+  .ang-oem{grid-template-columns:1fr}
+}
+@media(max-width:900px){
+  .ang-hero,.ang-intro{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+  .ang-zodiac-page{padding:18px 14px 48px}
+  .ang-hero,.ang-intro,.ang-oem{padding:22px;border-radius:24px}
+  .ang-card-grid,.ang-element-grid,.ang-mini-grid{grid-template-columns:1fr}
+  .ang-card-image{height:180px}
+  .ang-card-body dl div{grid-template-columns:1fr;gap:2px}
+  .ang-card-footer{align-items:flex-start;flex-direction:column}
+}
+
+
+.ang-sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.ang-hero.ang-hero-banner{display:block;position:relative;padding:0;background:transparent;border:0;box-shadow:none;overflow:hidden}
+.ang-hero.ang-hero-banner{border-radius:0}
+.ang-hero.ang-hero-banner>img{display:block;width:100%;height:auto;border-radius:0;border:0;box-shadow:none}
+@media(max-width:680px){.ang-hero.ang-hero-banner>img{border-radius:0}}
+.ang-hero.ang-hero-banner{position:relative}
+.ang-hero-link-overlays{position:absolute;inset:0;z-index:2;pointer-events:none}
+.ang-hero-link-overlays .ang-hero-btn{position:absolute;display:block;pointer-events:auto;border-radius:14px;outline:none;background:transparent}
+.ang-hero-link-overlays .ang-hero-btn:focus-visible{box-shadow:0 0 0 3px rgba(255,255,255,.9),0 0 0 6px rgba(53,18,79,.65)}
+.ang-hero-link-overlays .ang-hero-btn-find{left:3.75%;top:86.2%;width:18.4%;height:8.95%}
+.ang-hero-link-overlays .ang-hero-btn-shop{left:23.45%;top:86.2%;width:17.9%;height:8.95%}
+@media(max-width:680px){.ang-hero-link-overlays .ang-hero-btn{border-radius:10px}}
