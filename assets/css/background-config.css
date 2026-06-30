@@ -1276,6 +1276,7 @@ assets/css/background-config.css
     background: #25D366 !important;
     color: #ffffff !important;
     gap: 6px !important;
+    border-radius: 999px !important;
     box-shadow: 0 6px 18px rgba(37, 211, 102, 0.18) !important;
   }
   
@@ -1289,6 +1290,7 @@ assets/css/background-config.css
     flex: 1 1 auto !important;
     background: linear-gradient(135deg, var(--gold), #a8733b) !important;
     color: #ffffff !important;
+    border-radius: 999px !important;
     box-shadow: 0 6px 18px rgba(201, 147, 76, 0.20) !important;
   }
 }
