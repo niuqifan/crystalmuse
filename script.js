@@ -131,3 +131,37 @@ openProduct = function(id){
 };
 
 renderProducts(products);
+const AURANOVA_ADMIN_API = "https://auranova-admin-api.onrender.com";
+
+async function loadProductsFromAdmin() {
+  try {
+    const response = await fetch(`${AURANOVA_ADMIN_API}/api/products`);
+    const adminProducts = await response.json();
+
+    const liveProducts = adminProducts
+      .filter((product) => ["Active", "活跃"].includes(product.status))
+      .map((product, index) => ({
+        id: product.slug || product.sku || product.id,
+        name: product.name,
+        desc: `${product.crystal || "Crystal"} ${product.category || "product"} for ${product.intention || "wellness"}.`,
+        intention: product.intention || "Energy",
+        chakra: product.chakra || "All",
+        zodiac: product.zodiac || "All",
+        crystal: product.crystal || "Crystal",
+        shape: product.category || "Crystal",
+        moq: product.moq || 100,
+        grad: ["var(--grad-1)", "var(--grad-2)", "var(--grad-3)", "var(--grad-4)"][index % 4],
+        icon: "✦"
+      }));
+
+    if (!liveProducts.length) return;
+
+    products.splice(0, products.length, ...liveProducts);
+    fillFilters();
+    renderProducts(currentFiltered());
+  } catch (error) {
+    console.warn("Could not load products from admin API", error);
+  }
+}
+
+loadProductsFromAdmin();
