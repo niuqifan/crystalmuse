@@ -1,6 +1,6 @@
 (function(){
   const WHATSAPP_NUMBER = '8617629173592';
-  const EMAIL = 'info@auranovagems.com';
+  const EMAIL = 'niuqifan764@gmail.com';
   const form = document.querySelector('#b2bInquiryForm');
   const toast = document.querySelector('#toast');
   const showToast = (msg) => { if(!toast) return; toast.textContent = msg; toast.classList.add('show'); setTimeout(()=>toast.classList.remove('show'), 2600); };

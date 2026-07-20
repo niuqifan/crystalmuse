@@ -10,6 +10,6 @@
     }
     const subject = encodeURIComponent('Natural Crystal Sourcing Factory Verification Request');
     const body = encodeURIComponent(lines.join('\n'));
-    window.location.href = `mailto:info@auranovagems.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:niuqifan764@gmail.com?subject=${subject}&body=${body}`;
   });
 })();
