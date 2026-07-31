@@ -40,7 +40,7 @@
       const data = collectAndValidate();
       if(!data){ e.preventDefault(); return; }
       const text = encodeURIComponent(formDataText(data));
-      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank', 'noopener');
+      window.location.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
     });
   });
   document.querySelectorAll('[data-email]').forEach(btn => {
@@ -59,7 +59,7 @@
       const data = collectAndValidate();
       if(!data) return;
       const text = encodeURIComponent(formDataText(data));
-      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank', 'noopener');
+      window.location.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
     });
   }
 })();

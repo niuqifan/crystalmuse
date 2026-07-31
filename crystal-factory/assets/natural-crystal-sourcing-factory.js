@@ -8,8 +8,7 @@
     for(const [key, value] of data.entries()){
       if(String(value).trim()) lines.push(`${key}: ${value}`);
     }
-    const subject = encodeURIComponent('Natural Crystal Sourcing Factory Verification Request');
-    const body = encodeURIComponent(lines.join('\n'));
-    window.location.href = `mailto:niuqifan764@gmail.com?subject=${subject}&body=${body}`;
+    lines.unshift('Natural Crystal Sourcing Factory Verification Request', '----------------------------------------------------');
+    window.location.href = `https://wa.me/8617629173592?text=${encodeURIComponent(lines.join('\n'))}`;
   });
 })();

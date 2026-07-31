@@ -49,8 +49,16 @@ function bindEvents(){
   document.body.addEventListener('click',e=>{ const f=e.target.closest('[data-filter]'); if(f){ const target={'intention':'#filterIntention','chakra':'#filterChakra','zodiac':'#filterZodiac'}[f.dataset.filter]; if(target){$(target).value=f.dataset.value; applyFilters();}} const v=e.target.closest('[data-view]'); if(v) openProduct(v.dataset.view); const a=e.target.closest('[data-add]'); if(a){ window.location.href='whatsapp.html'; } const r=e.target.closest('[data-remove]'); if(r){ basket=basket.filter(x=>x.id!=r.dataset.remove); localStorage.setItem('crystalBasket',JSON.stringify(basket)); updateBasket(); } const c=e.target.closest('[data-close]'); if(c) closeModal(c.dataset.close); });
   ['openInquiry','floatingInquiry'].forEach(id=>$('#'+id).onclick=()=>window.location.href='whatsapp.html');
   $$('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m) closeModal(m.id)}));
-  $('#contactForm').onsubmit=e=>{e.preventDefault(); alert('Thank you! This demo form can be connected to Formspree, EmailJS or your backend.');};
-  $('#inquiryForm').onsubmit=e=>{e.preventDefault(); alert('Inquiry submitted in demo mode. Connect this form before going live.');};
+  const openWhatsAppInquiry = (form, heading) => {
+    const data = new FormData(form);
+    const lines = [heading, '----------------------------------'];
+    for (const [key, value] of data.entries()) {
+      if (String(value).trim()) lines.push(`${key}: ${value}`);
+    }
+    window.location.href = `https://wa.me/8617629173592?text=${encodeURIComponent(lines.join('\n'))}`;
+  };
+  $('#contactForm').onsubmit=e=>{e.preventDefault();openWhatsAppInquiry(e.currentTarget,'AURANOVAGEMS Website Inquiry');};
+  $('#inquiryForm').onsubmit=e=>{e.preventDefault();openWhatsAppInquiry(e.currentTarget,'AURANOVAGEMS Product / OEM Inquiry');};
 }
 init();
 
