@@ -1,4 +1,27 @@
 (function(){
+  document.querySelectorAll('.avb-faq-item').forEach(function(item, index){
+    const heading = item.querySelector('h3');
+    const answer = item.querySelector('p');
+    if(!heading || !answer) return;
+
+    const button = document.createElement('button');
+    const answerId = 'avb-faq-answer-' + (index + 1);
+    button.className = 'avb-faq-toggle';
+    button.type = 'button';
+    button.textContent = heading.textContent;
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-controls', answerId);
+    answer.id = answerId;
+    answer.hidden = true;
+    heading.replaceWith(button);
+
+    button.addEventListener('click', function(){
+      const isOpen = item.classList.toggle('is-open');
+      button.setAttribute('aria-expanded', String(isOpen));
+      answer.hidden = !isOpen;
+    });
+  });
+
   const form = document.querySelector('[data-avb-bracelet-form]');
   if(!form) return;
   form.addEventListener('submit', function(event){
