@@ -59,3 +59,12 @@ a{color:inherit;text-decoration:none}.ag-wrap{width:min(1180px,calc(100% - 40px)
 .ag-breadcrumb+ .ag-hero .ag-hero-copy h1{font-size:clamp(44px,5.2vw,68px);line-height:.98}
 @media (max-width:980px){.ag-breadcrumb+ .ag-hero .ag-hero-grid{grid-template-columns:1fr}}
 @media (max-width:640px){.ag-breadcrumb{padding-top:16px}.ag-breadcrumb+ .ag-hero{padding-top:32px}.ag-breadcrumb+ .ag-hero .ag-hero-copy h1{font-size:clamp(36px,10.5vw,46px)}}
+
+/* Three-step crystal selection guide */
+.ag-choice-steps{display:grid;gap:12px;margin:24px 0 0;padding:0;list-style:none;counter-reset:choice-step}
+.ag-choice-steps li{position:relative;padding:15px 16px 15px 54px;border:1px solid var(--ag-line);border-radius:17px;background:rgba(255,255,255,.72);counter-increment:choice-step}
+.ag-choice-steps li:before{content:counter(choice-step);position:absolute;left:14px;top:15px;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ag-plum);color:#fff;font-size:13px;font-weight:900}
+.ag-choice-steps strong,.ag-choice-steps span{display:block}.ag-choice-steps strong{color:var(--ag-ink)}.ag-choice-steps span{margin-top:3px;color:var(--ag-muted);font-size:14px}
+.ag-related-grid{grid-template-columns:repeat(3,1fr)}
+@media (max-width:980px){.ag-related-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.ag-related-grid{grid-template-columns:1fr}}
