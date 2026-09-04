@@ -29,7 +29,7 @@ a{color:inherit;text-decoration:none}
 .section-heading>p:last-child{max-width:650px;margin:0 0 4px;color:var(--muted);line-height:1.6}
 .product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
 .product-card{display:grid;grid-template-columns:minmax(190px,.72fr) 1.28fr;overflow:hidden;border:1px solid var(--line);border-radius:26px;background:#fff;box-shadow:var(--shadow)}
-.product-image{min-height:350px;padding:24px 12px;background:linear-gradient(145deg,#f8edf7,#f8eee9);overflow:hidden}
+.product-image{min-height:350px;padding:24px 12px;background:#fff;overflow:hidden}
 .product-image img{width:100%;height:100%;object-fit:contain;transition:transform .5s ease}
 .product-card:hover .product-image img{transform:scale(1.018)}
 .product-copy{padding:28px 25px;display:flex;flex-direction:column}
