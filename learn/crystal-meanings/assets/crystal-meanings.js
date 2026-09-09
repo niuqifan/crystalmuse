@@ -66,6 +66,12 @@ const cardImageByName = {
   'Black Obsidian': 'assets/images/card-obsidian.webp'
 };
 const braceletNames = new Set(['Garnet','Obsidian','Rhodonite','Moonstone','Sodalite']);
+const productPageByName = {
+  'Amethyst': '/shop/amethyst-bracelet/',
+  'Citrine': '/shop/citrine-bracelet/',
+  'Obsidian': '/shop/black-obsidian-bracelet/',
+  'Rose Quartz': '/shop/rose-quartz-bracelet/'
+};
 function getCardImage(crystal){
   return cardImageByName[crystal.name] || (braceletNames.has(crystal.name) ? 'assets/images/shop-by-meaning-bracelets.webp' : 'assets/images/library-crystal-showcase.webp');
 }
@@ -82,6 +88,10 @@ let activeLetter = 'all';
 
 function cardTemplate(crystal){
   const chakraLabel = crystal.chakra.split(',').map(x => x.trim()).map(x => x.replace(/\b\w/g, c => c.toUpperCase())).join(', ');
+  const productPage = productPageByName[crystal.name];
+  const braceletLink = productPage
+    ? `<a href="${productPage}">View bracelet</a>`
+    : '<a href="/custom-crystal-bracelets/">Related bracelets</a>';
   return `<article class="ag-card" data-search="${[crystal.name,crystal.meaning,crystal.best,crystal.chakra,crystal.zodiac,crystal.intention].join(' ').toLowerCase()}" data-letter="${crystal.letter}" data-chakra="${crystal.chakra}" data-intention="${crystal.intention}">
     <div class="ag-card-media" style="--gem-bg:${crystal.color}"><img src="${getCardImage(crystal)}" alt="${crystal.name} crystal meaning guide image" loading="lazy"></div>
     <div class="ag-card-body">
@@ -92,7 +102,7 @@ function cardTemplate(crystal){
         <div class="ag-meta-row"><span>Chakra</span><span>${chakraLabel}</span></div>
         <div class="ag-meta-row"><span>Zodiac</span><span>${crystal.zodiac}</span></div>
       </div>
-      <div class="ag-card-foot"><span class="ag-pill">${crystal.best.split(',')[0]}</span><a href="/custom-crystal-bracelets/">Related bracelets</a></div>
+      <div class="ag-card-foot"><span class="ag-pill">${crystal.best.split(',')[0]}</span>${braceletLink}</div>
     </div>
   </article>`;
 }
