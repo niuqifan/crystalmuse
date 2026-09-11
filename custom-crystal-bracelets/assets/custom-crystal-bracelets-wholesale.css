@@ -57,6 +57,11 @@ body{margin:0;background:#fff8f3;color:var(--avb-text);font-family:Inter,ui-sans
 .avb-stone-card{min-height:0}
 .avb-stone-card:before{display:none}
 .avb-stone-card h3{margin:18px 0 4px}
+.avb-stone-link{position:relative;display:inline-flex;margin-top:8px;color:#8b5928;font-weight:800;text-decoration:none;border-bottom:1px solid rgba(139,89,40,.35)}
+.avb-stone-link:hover,.avb-stone-link:focus-visible{color:#5d3717;border-bottom-color:currentColor}
+.avb-hero{background-image:linear-gradient(90deg,rgba(255,250,247,.96) 0%,rgba(255,247,251,.88) 37%,rgba(255,247,251,.30) 66%,rgba(255,247,251,.08) 100%),url('./crystal-bracelet-lifestyle.webp')}
+.avb-section--fba{background-image:linear-gradient(90deg,rgba(255,250,247,.98) 0%,rgba(255,246,251,.86) 46%,rgba(255,246,251,.34) 100%),url('./private-label-bracelet-packaging.webp')}
+.avb-section--inquiry{background-image:linear-gradient(90deg,rgba(255,250,247,.98),rgba(255,246,251,.90) 52%,rgba(255,246,251,.64)),url('./private-label-bracelet-packaging.webp')}
 .avb-stone-image{position:relative;display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:20px;border:1px solid rgba(184,121,53,.12);background:#fff;box-shadow:0 14px 30px rgba(104,62,104,.10)}
 .avb-hero__visual{display:block;position:relative;padding:18px 18px 68px;border:1px solid rgba(184,121,53,.16);border-radius:46px;background:linear-gradient(145deg,rgba(255,255,255,.92),rgba(255,239,248,.72));box-shadow:0 30px 70px rgba(104,62,104,.14);isolation:isolate}
 .avb-hero__visual:before{content:"";position:absolute;inset:-24px 42px 38px -28px;border:1px solid rgba(109,60,146,.12);border-radius:52px;z-index:-1}
