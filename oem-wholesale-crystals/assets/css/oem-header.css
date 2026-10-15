@@ -1,0 +1,22 @@
+.nav .container { gap: 16px; }
+.nav .brand { display: inline-flex; align-items: center; gap: 10px; flex-shrink: 0; white-space: nowrap; }
+.nav .brand img { display: block; width: 44px; height: 44px; object-fit: contain; }
+.navlinks { gap: 15px; }
+.navlinks a { white-space: nowrap; }
+.mobile-nav { display: none; position: relative; flex-shrink: 0; }
+.mobile-nav summary { list-style: none; cursor: pointer; border: 1px solid #dacfe7; border-radius: 10px; padding: 10px 14px; color: #44235e; background: #fff; font-weight: 700; }
+.mobile-nav summary::-webkit-details-marker { display: none; }
+.mobile-nav nav { position: absolute; right: 0; top: calc(100% + 10px); width: min(280px, calc(100vw - 32px)); display: grid; padding: 8px; border: 1px solid #e8dfed; border-radius: 14px; background: #fff; box-shadow: 0 16px 36px rgba(40, 21, 53, .14); }
+.mobile-nav nav a { display: block; padding: 11px 12px; border-radius: 8px; color: #30253a; font-size: 14px; font-weight: 700; }
+.mobile-nav nav a:hover, .mobile-nav nav a:focus-visible { background: #f6f0fa; }
+@media (max-width: 1100px) {
+  .navlinks { display: none; }
+  .mobile-nav { display: block; }
+}
+@media (max-width: 620px) {
+  .nav .container { height: auto; padding-top: 10px; padding-bottom: 10px; flex-wrap: wrap; }
+  .nav .brand { order: 1; font-size: 16px; }
+  .nav .brand img { width: 38px; height: 38px; }
+  .mobile-nav { order: 2; margin-left: auto; }
+  .nav .container > .btn { order: 3; width: 100%; }
+}
