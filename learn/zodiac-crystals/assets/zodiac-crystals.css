@@ -71,7 +71,7 @@ a{color:inherit}
 .ang-chart{margin-top:54px}
 .ang-table-wrap{overflow-x:auto;border:1px solid var(--ang-line);border-radius:24px;background:var(--ang-card);box-shadow:0 16px 40px rgba(70,42,20,.08)}
 .ang-table-wrap:focus{outline:3px solid rgba(154,100,31,.25);outline-offset:3px}
-.ang-table-wrap table{width:100%;min-width:820px;border-collapse:collapse;text-align:left}
+.ang-table-wrap table{width:100%;min-width:1040px;border-collapse:collapse;text-align:left}
 .ang-table-wrap caption{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .ang-table-wrap thead th{padding:16px 18px;background:var(--ang-ink);color:#fff;font-size:13px;letter-spacing:.04em}
 .ang-table-wrap td{padding:15px 18px;border-bottom:1px solid var(--ang-line);color:var(--ang-muted)}
