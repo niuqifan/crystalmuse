@@ -30,6 +30,15 @@
     });
   });
 
+  document.querySelectorAll('.ang-table-wrap a[href^="#sign-"]').forEach(link => {
+    link.addEventListener('click', () => {
+      activeFilter = 'all';
+      if (search) search.value = '';
+      buttons.forEach(button => button.classList.toggle('is-active', button.dataset.filter === 'all'));
+      applyFilters();
+    });
+  });
+
   search?.addEventListener('input', applyFilters);
   search?.addEventListener('search', applyFilters);
   clear?.addEventListener('click', () => {
