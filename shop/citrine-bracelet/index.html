@@ -30,6 +30,26 @@
   <meta name="twitter:description" content="Explore Brazilian citrine bead sizes, wrist fit and natural color. Request current photos and stone details before ordering.">
   <meta name="twitter:image" content="https://auranovagems.com/shop/assets/citrine-bracelet-clean.png">
   <link rel="stylesheet" href="../product.css">
+  <style>
+    .citrine-cta-short,.citrine-mobile-nav{display:none}
+    @media(max-width:900px){
+      .citrine-mobile-nav{display:block;position:relative}
+      .citrine-mobile-nav summary{list-style:none;cursor:pointer;padding:10px 13px;border:1px solid var(--line);border-radius:999px;color:var(--deep);font-size:14px;font-weight:800}
+      .citrine-mobile-nav summary::-webkit-details-marker{display:none}
+      .site-header .citrine-mobile-nav nav{display:grid;position:absolute;top:calc(100% + 12px);right:0;z-index:20;width:min(270px,calc(100vw - 34px));gap:0;padding:9px;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:var(--shadow)}
+      .site-header .citrine-mobile-nav nav a{display:block;padding:11px 12px;border-radius:10px;color:var(--ink);font-size:14px;text-decoration:none}
+      .site-header .citrine-mobile-nav nav a:hover,.site-header .citrine-mobile-nav nav a:focus-visible{background:var(--blush);color:var(--deep)}
+    }
+    @media(max-width:600px){
+      .site-header{gap:8px}
+      .site-header .brand{gap:7px;min-width:0}
+      .site-header .brand img{width:32px;height:32px;flex:none}
+      .site-header .brand strong{font-size:12px;letter-spacing:.02em}
+      .site-header .header-cta{margin-left:auto;white-space:nowrap;padding:9px 11px}
+      .citrine-cta-full{display:none}.citrine-cta-short{display:inline}
+      .citrine-mobile-nav summary{padding:9px 10px;font-size:12px}
+    }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -70,7 +90,8 @@
   <header class="site-header">
     <a class="brand" href="/"><img src="../../assets/images/site-logo.png" alt="" width="42" height="42"><span><strong>AURANOVAGEMS</strong><small>Healing Energy</small></span></a>
     <nav><a href="/">Home</a><a href="/shop/">Shop</a><a href="/learn/crystal-meanings/">Learn</a><a href="/custom-crystal-bracelets/">Custom Bracelets</a></nav>
-    <a class="header-cta" href="/whatsapp.html">Ask on WhatsApp</a>
+    <a class="header-cta" href="/whatsapp.html" aria-label="Ask on WhatsApp"><span class="citrine-cta-full">Ask on WhatsApp</span><span class="citrine-cta-short" aria-hidden="true">Chat</span></a>
+    <details class="citrine-mobile-nav"><summary aria-label="Open navigation">Menu</summary><nav aria-label="Mobile navigation"><a href="/">Home</a><a href="/shop/">Shop</a><a href="/learn/crystal-meanings/">Learn</a><a href="/custom-crystal-bracelets/">Custom Bracelets</a><a href="/crystal-factory/">Factory</a><a href="/whatsapp.html">Ask on WhatsApp</a></nav></details>
   </header>
 
   <main class="product-main">
