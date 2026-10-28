@@ -24,8 +24,17 @@
 
   const form = document.querySelector('[data-avb-bracelet-form]');
   if(!form) return;
-  form.addEventListener('submit', function(event){
-    event.preventDefault();
+  const emailButton = form.querySelector('[data-avb-email-inquiry]');
+
+  function trackContactIntent(method){
+    if(typeof window.gtag === 'function'){
+      window.gtag('event', 'contact_' + method + '_open', {
+        page_type: 'custom_crystal_bracelets'
+      });
+    }
+  }
+
+  function inquiryMessage(){
     const data = new FormData(form);
     const lines = [
       'Custom Crystal Bracelets & Jewelry Wholesale Inquiry',
@@ -42,6 +51,22 @@
       'Custom Requirements:',
       data.get('message') || ''
     ];
-    window.location.href = 'https://wa.me/8617629173592?text=' + encodeURIComponent(lines.join('\n'));
+    return lines.join('\n');
+  }
+
+  form.addEventListener('submit', function(event){
+    event.preventDefault();
+    trackContactIntent('whatsapp');
+    window.location.href = 'https://wa.me/8617629173592?text=' + encodeURIComponent(inquiryMessage());
   });
+
+  if(emailButton){
+    emailButton.addEventListener('click', function(){
+      if(!form.reportValidity()) return;
+      trackContactIntent('email');
+      window.location.href = 'mailto:niuqifan764@gmail.com?subject=' +
+        encodeURIComponent('Custom crystal bracelet inquiry') +
+        '&body=' + encodeURIComponent(inquiryMessage());
+    });
+  }
 })();
